@@ -1,4 +1,18 @@
-<form action="#" class="p-5 bg-white">
+
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h3 class="section-sub-title">Contact Form</h3>
+            <h2 class="section-title mb-3">Get In Touch</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-7 mb-5">
+
+            
+
+            <form action="#" class="p-5 bg-white">
               
               <h2 class="h4 text-black mb-5">Contact Form</h2> 
 
@@ -44,20 +58,6 @@
 
   
             </form>
-            <div class="site-section bg-light" id="contact-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h3 class="section-sub-title">Contact Form</h3>
-            <h2 class="section-title mb-3">Get In Touch</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-7 mb-5">
-
-            
-
-
           </div>
         
         </div>
