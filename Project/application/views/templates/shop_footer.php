@@ -37,6 +37,27 @@
 		<p class="pull-right">&copy; Bootshop</p>
 	</div><!-- Container End -->
 	</div>
+
+	  <!-- Logout Modal-->
+	  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-success" href="<?= base_url('auth/logout'); ?>">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <!-- Placed at the end of the document so the pages load faster ============================================= -->
 	<script src="<?= base_url('assets/'); ?>themes/js/jquery.js" type="text/javascript"></script>
 	<script src="<?= base_url('assets/'); ?>themes/js/bootstrap.min.js" type="text/javascript"></script>
@@ -47,7 +68,7 @@
 	
 	<!-- Themes switcher section ============================================================================================= -->
 <div id="secectionBox">
-<link rel="stylesheet" href="<?= base_url(); ?>assets/themes/switch/themeswitch.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?= base_url('assets/'); ?>themes/switch/themeswitch.css" type="text/css" media="screen" />
 
 <script src="<?= base_url('assets/'); ?>themes/switch/theamswitcher.js" type="text/javascript" charset="utf-8"></script>
 	<div id="themeContainer">

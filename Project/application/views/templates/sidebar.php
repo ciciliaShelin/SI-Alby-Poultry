@@ -53,7 +53,7 @@
             <a class="nav-link" href="<?= base_url($sm['url']); ?>">
                 <i class="<?= $sm['icon']; ?>"></i>
                 <span><?= $sm['title']; ?></span></a>
-        </li>
+            </li>
         <?php endforeach; ?>
 
             <!-- Divider -->

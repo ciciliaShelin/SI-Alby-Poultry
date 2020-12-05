@@ -10,18 +10,17 @@ class Auth extends CI_Controller
     }
 
 
-    public function index()
+    public function login()
     {
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
-
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Login Page';
-            $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/login');
-            $this->load->view('templates/auth_footer');
+            $this->load->view('templates/shop_header', $data);
+            $this->load->view('templates/shop_sidebar');
+            $this->load->view('auth/login_user');
+            $this->load->view('templates/shop_footer');
         } else {
-            //validasi sukse
             $this->_login();
         }
     }
@@ -33,50 +32,52 @@ class Auth extends CI_Controller
         $user =  $this->db->get_where('user', ['email' => $email])->row_array();
 
         //jika usernya ada
-        if($user) {
+        if ($user) {
             //jika usernya aktif
-            if($user['is_active']== 1) 
-                {
-                    // cek password
-                    if(password_verify($password, $user['password']))
-                        {
-                            $data = 
-                                [
-                                    'email' => $user['email'],
-                                    'role_id' => $user['role_id']
-                                ];
-                                $this->session->set_userdata($data);
+            if ($user['is_active'] == 1) {
+                // cek password
+                if (password_verify($password, $user['password'])) {
+                    $data_session = 
+                        [
+                            'email' => $user['email'],
+                            'role_id' => $user['role_id']
+                        ];
 
-                                if($user['role_id'] == 1) {
+                    // $data_session = array('email' => $email, 'role' => $user['role_id']);
+                    // $data['userr'] = $this->session->set_userdata($data_session);
+                    $this->session->set_userdata($data_session);
 
-                                    redirect('admin');
-                                } else {
+                    if ($user['role_id'] == 1) {
 
-                                    redirect('user');
-                                }
-                        }else
-                            {
-                                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-                                Wrong password!</div>');
-                                redirect('auth');
-                            }
-                }else 
-                    {
-                        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-                        This email has not been activated!</div>');
-                        redirect('auth');
+                        redirect('admin');
+                    } else {
+
+                        redirect('user');
                     }
+                } else {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                                Wrong password!</div>');
+                    redirect('auth/login');
+                }
+            } else {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                        This email has not been activated!</div>');
+                redirect('auth/login');
+            }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Email is not registered!</div>');
-            redirect('auth');
+            redirect('auth/login');
         }
-        
     }
 
 
     public function registration()
     {
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+        $user =  $this->db->get_where('user', ['email' => $email])->row_array();
+
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules(
             'email',
@@ -98,10 +99,16 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
 
         if ($this->form_validation->run() == false) {
+            // $data['title'] = 'User Registration';
+            // $this->load->view('templates/auth_header', $data);
+            // $this->load->view('auth/registration');
+            // $this->load->view('templates/auth_footer');
+
             $data['title'] = 'User Registration';
-            $this->load->view('templates/auth_header', $data);
-            $this->load->view('auth/registration');
-            $this->load->view('templates/auth_footer');
+            $this->load->view('templates/shop_header', $data);
+            $this->load->view('templates/shop_sidebar');
+            $this->load->view('auth/registrasi_user');
+            $this->load->view('templates/shop_footer');
         } else {
             $data = [
                 'name' => htmlspecialchars($this->input->post('name', 'true')),
@@ -116,7 +123,7 @@ class Auth extends CI_Controller
             $this->db->insert('user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Congratulation! Your account has been created. Please Login!</div>');
-            redirect('auth');
+            redirect('auth/login');
         }
     }
 
@@ -127,6 +134,6 @@ class Auth extends CI_Controller
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         You have been logged out!</div>');
-        redirect('auth');
+        redirect('auth/login');
     }
 }

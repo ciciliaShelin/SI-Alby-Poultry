@@ -24,7 +24,7 @@
                 </thead>
                 <tbody>
                     <?php $i = 1; ?>
-                    <?php foreach ($menu as $m) : ?>
+                    <?php foreach ($Menu as $m) : ?>
                         <tr>
                             <th scope="row"><?= $i; ?></th>
                             <td><?= $m['menu']; ?></td>
