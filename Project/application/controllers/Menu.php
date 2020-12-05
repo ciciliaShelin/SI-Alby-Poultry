@@ -59,7 +59,7 @@ class Menu extends CI_Controller
                 $config['max_size'] = '2048';
                 $config['overwrite'] = true;
                 $config['upload_path'] = './uploads/produk/';
-                $config['file_name'] = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
+                // $config['file_name'] = 'item-'.date('ymd').'-'.substr(md5(rand()),0,10);
 
 
                 
