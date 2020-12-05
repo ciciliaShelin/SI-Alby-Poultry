@@ -1,3 +1,12 @@
+           <!-- QUERY MENU PRODUK -->
+		   <?php 
+        $queryMenu = "SELECT barang.*, jenis_barang.nama_jenis
+                        FROM barang JOIN jenis_barang 
+                          ON barang.jenis_id = jenis_barang.id_jenis
+                      
+                    ";
+        $MenuProduk = $this->db->query($queryMenu)->result_array();
+        ?>
 
 	<div class="span9">
     <ul class="breadcrumb">
@@ -29,17 +38,17 @@
 <br class="clr"/>
 <div class="tab-content">
 	<div class="tab-pane" id="listView">
-		<div class="row">	  
+		<div class="row">	
+			<?php foreach ($MenuProduk as $mp) : ?>  
 			<div class="span2">
-				<img src="themes/images/products/3.jpg" alt=""/>
+				<img src="<?= base_url($mp['gambar']);?>" alt=""/>
 			</div>
 			<div class="span4">
-				<h3>Nama Produk</h3>				
+				<h3><?= $mp['nama_barang']; ?></h3>				
 				<hr class="soft"/>
 				<!-- <h5>Product Name </h5> -->
 				<p>
-				Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-				that is why our goods are so popular..
+				<?= $mp['deskripsi']; ?>
 				</p>
 				<a class="btn btn-small pull-right" href="<?= base_url('produk/detailproduk'); ?>">View Details</a>
 				<br class="clr"/>
@@ -57,6 +66,7 @@
 			
 				</form>
 			</div>
+			<?php endforeach; ?>
 		</div>
 		<hr class="soft"/>
 
@@ -64,19 +74,20 @@
 
 	<div class="tab-pane  active" id="blockView">
 		<ul class="thumbnails">
+		<?php foreach ($MenuProduk as $mp) : ?>  
 			<li class="span3">
 			  <div class="thumbnail">
-				<a href="<?= base_url('produk/detailproduk'); ?>"><img src="<?= base_url('assets/'); ?>themes/images/products/3.jpg" alt=""/></a>
+				<a href="<?= base_url('produk/detailproduk'); ?>"><img src="<?= base_url($mp['gambar']);?>" alt=""/></a>
 				<div class="caption">
-				  <h5>Manicure &amp; Pedicure</h5>
+				  <h5><?= $mp['nama_barang']; ?></h5>
 				  <p> 
-					I'm a paragraph. 
+				  <?= $mp['deskripsi']; ?> 
 				  </p>
 				   <h4 style="text-align:center"><a class="btn" href="<?= base_url('produk/detailproduk'); ?>"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 				</div>
 			  </div>
 			</li>
-			
+			<?php endforeach; ?>
 		  </ul>
 	<hr class="soft"/>
 	</div>

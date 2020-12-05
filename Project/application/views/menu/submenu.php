@@ -75,7 +75,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?= base_url('menu/submenu'); ?>" method="POST" enctype="multipart/form-data">
+            <?= form_open_multipart('menu/submenu');  ?>
+            <!-- <form action="<?= base_url('menu/submenu'); ?>" method="POST" enctype="multipart/form-data"> -->
                 <div class="modal-body">
                     <div class="form-group">
                         <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Nama Barang">
@@ -94,15 +95,10 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Deskripsi">
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="gambar" name="gambar">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="gambar" name="gambar" aria-describedby="inputGroupFileAddon01">
-                            <label class="custom-file-label" for="gambar">Choose file</label>
-                        </div>
+                    <div class="form-group">
+                        <input type="file"  id="gambar"  name="gambar" >
                     </div>
+                   
                     <!-- <div class="form-group">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" value="1" name="is_active" id="is_active" checked>
@@ -115,7 +111,8 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Add</button>
                 </div>
-            </form>
+            <!-- </form> -->
+            <?= form_close(); ?>
         </div>
     </div>
 </div>
