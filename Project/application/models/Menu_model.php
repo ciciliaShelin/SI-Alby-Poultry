@@ -11,14 +11,25 @@ class Menu_model extends CI_Model
                       ON user_sub_menu.menu_id = user_menu.id
                 ";
         return $this->db->query($query)->result_array();
+        
     }
 
     public function menuproduk()
     {
-        $queryMenu = "SELECT barang.*, jenis_barang.nama_jenis
-                        FROM barang JOIN jenis_barang 
-                          ON barang.jenis_id = jenis_barang.id_jenis
-        ";
-        return $this->db->query($queryMenu)->result_array();
+        $query = "SELECT * FROM barang ";
+        return $this->db->query($query)->result_array();
+    }
+
+    public function delete_produk($id)
+    {
+        $query = "SELECT * FROM barang ";
+        $this->load->database($query);
+        $this->db->where('id_barang', $id);
+        return $this->db->delete('barang');  
+    }
+
+    public function detail_produk($id)
+    {
+        return $this->db->get_where("barang", ['id_barang' => $id])->result_array();
     }
 }

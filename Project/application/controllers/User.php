@@ -25,6 +25,11 @@ class User extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Alby Pultry';
+
+            
+
+
+
             $this->load->view('templates/shop_header', $data);
             $this->load->view('shop/banner');
             $this->load->view('templates/shop_sidebar');

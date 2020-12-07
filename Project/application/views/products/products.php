@@ -1,10 +1,6 @@
            <!-- QUERY MENU PRODUK -->
 		   <?php 
-        $queryMenu = "SELECT barang.*, jenis_barang.nama_jenis
-                        FROM barang JOIN jenis_barang 
-                          ON barang.jenis_id = jenis_barang.id_jenis
-                      
-                    ";
+        $queryMenu = "SELECT * FROM barang ";
         $MenuProduk = $this->db->query($queryMenu)->result_array();
         ?>
 
@@ -41,18 +37,20 @@
 		<div class="row">	
 			<?php foreach ($MenuProduk as $mp) : ?>  
 			<div class="span2">
-				<img src="<?= base_url($mp['gambar']);?>" alt=""/>
+				<img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" alt=""/>
+				
 			</div>
 			<div class="span4">
-				<h3><?= $mp['nama_barang']; ?></h3>				
-				<hr class="soft"/>
+				<h4><?= $mp['nama_barang']; ?></h4>				
+				<!-- <hr class="soft"/> -->
 				<!-- <h5>Product Name </h5> -->
 				<p>
 				<?= $mp['deskripsi']; ?>
 				</p>
-				<a class="btn btn-small pull-right" href="<?= base_url('produk/detailproduk'); ?>">View Details</a>
-				<br class="clr"/>
+				<!-- <a class="btn btn-small pull-right" href="<?= base_url('produk/detailproduk'); ?>">View Details</a> -->
+				
 			</div>
+			
 			<div class="span3 alignR">
 			<form class="form-horizontal qtyFrm">
                 <br>
@@ -60,13 +58,14 @@
 			<!-- <label class="checkbox">
 				<input type="checkbox">  Adds product to compair
 			</label><br/> -->
-			<br> <br> <br>
+		
 			  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-			  <a href="<?= base_url('produk/detailproduk'); ?>" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-			
-				</form>
+			  <a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+			</form>
 			</div>
+			<hr >
 			<?php endforeach; ?>
+			
 		</div>
 		<hr class="soft"/>
 
@@ -77,16 +76,17 @@
 		<?php foreach ($MenuProduk as $mp) : ?>  
 			<li class="span3">
 			  <div class="thumbnail">
-				<a href="<?= base_url('produk/detailproduk'); ?>"><img src="<?= base_url($mp['gambar']);?>" alt=""/></a>
+				<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"><img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" style="width: 300px;" alt=""/></a>
 				<div class="caption">
 				  <h5><?= $mp['nama_barang']; ?></h5>
-				  <p> 
+				  <!-- <p> 
 				  <?= $mp['deskripsi']; ?> 
-				  </p>
-				   <h4 style="text-align:center"><a class="btn" href="<?= base_url('produk/detailproduk'); ?>"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
+				  </p> -->
+				   <h4 style="text-align:center"><a class="btn" href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 				</div>
 			  </div>
 			</li>
+			
 			<?php endforeach; ?>
 		  </ul>
 	<hr class="soft"/>

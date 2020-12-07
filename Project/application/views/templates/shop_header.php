@@ -75,6 +75,7 @@
 						<li class=""><a href="<?= base_url('produk/semuaproduk'); ?>">Products</a></li>
 						<li class=""><a href="normal.html">Pemesanan</a></li>
 						<li class=""><a href="contact.html">Contact</a></li>
+						
 						<?php if ($this->session->userdata('email') == null) : ?>
 							<li class="">
 								<a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
@@ -106,6 +107,7 @@
 								</div>
 
 							<?php else : ?>
+								<li class=""><a href="contact.html">Akun</a></li>
 								<a href="#login" role="button" data-toggle="modal" data-target="#logoutModal" style="padding-right:0"><span class="btn btn-large btn-success">Logout</span></a>
 								<!-- <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">
 									<div class="modal-header">

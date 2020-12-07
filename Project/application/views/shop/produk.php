@@ -1,22 +1,28 @@
-
+           <!-- QUERY MENU PRODUK -->
+		   <?php 
+        $queryMenu = "SELECT * FROM barang ";
+        $MenuProduk = $this->db->query($queryMenu)->result_array();
+        ?>
 		<div class="span9">		
 			<div class="well well-small">
 			<h4>Featured Products <small class="pull-right"></small></h4>
 			<div class="row-fluid">
 			<div id="featured" class="carousel slide">
 			<div class="carousel-inner">
-			  <div class="item active">
-			  <ul class="thumbnails">
-				<li class="span3">
-				  <div class="thumbnail">
-				  <i class="tag"></i>
-					<a href="<?= base_url('produk/detailproduk'); ?>"><img src="<?= base_url('assets/'); ?>themes/images/products/b1.jpg" alt=""></a>
+			<div class="item active">
+			<ul class="thumbnails">
+			<?php foreach ($MenuProduk as $mp) : ?>  
+			<li class="span3">
+			<div class="thumbnail">
+				<i class=""></i>
+					<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"><img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					  <h4><a class="btn" href="<?= base_url('produk/detailproduk'); ?>">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5><?= $mp['nama_barang']; ?></h5>
+					  <h4><a class="btn" href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>">VIEW</a> <span class="pull-right">$222.00</span></h4>
 					</div>
-				  </div>
-				</li>
+				</div>
+			</li>
+			<?php endforeach; ?>
 
 			  </ul>
 			  </div>
