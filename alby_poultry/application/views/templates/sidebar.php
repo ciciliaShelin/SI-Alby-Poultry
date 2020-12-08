@@ -100,6 +100,20 @@
                 </ul>
                 </div>
 
+                <div class="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="nav-link" href="<?php echo base_url('dashboard/tentang') ?> ">
+                    <span>Tentang</span></a>
+                </ul>
+                </div>
+
+                <div class="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="nav-link" href="<?php echo base_url('dashboard/kontak') ?> ">
+                    <span>Kontak</span></a>
+                </ul>
+                </div>
+
 
                        <div class="navbar">
                         <ul class="nav navbar-nav navbar-right">
