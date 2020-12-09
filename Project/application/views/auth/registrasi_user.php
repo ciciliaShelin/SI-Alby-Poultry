@@ -3,21 +3,10 @@
 		<li><a href="<?= base_url('produk/semuaproduk'); ?>">Home</a> <span class="divider">/</span></li>
 		<li class="active">Registration</li>
     </ul>
-	<h3> Registration</h3>	
+    <h3> Registration</h3>	
+    <?= $this->session->flashdata('message'); ?>
 	<div class="well">
-	<!--
-	<div class="alert alert-info fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div>
-	<div class="alert fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div>
-	 <div class="alert alert-block alert-error fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Lorem Ipsum is simply</strong> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-	 </div> -->
+
 	<form class="user" method="POST" action="<?= base_url('auth/registration'); ?>" >
 	
 		<div class="control-group">
@@ -34,8 +23,25 @@
             <input type="text" id="email" name="email" placeholder="Email Address" value="<?= set_value('email'); ?>">
             <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
+        </div>	
+
+		<div class="control-group">
+            <label class="control-label" for="email">Jenis Kelamin </label>
+            <div class="controls">
+            <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="LAKI-LAKI" checked="checked"> Laki-laki
+            <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value= "PEREMPUAN"> Perempuan
+            <?= form_error('jenis_kelamin', '<small class="text-danger pl-3">', '</small>'); ?>
+            </div>
+        </div>
+
+	    <div class="control-group">
+            <label class="control-label" for="password1">No Telepon </label>
+            <div class="controls">
+            <input type="text" id="no_tlp" name="no_tlp" placeholder="No Telepon">
+            <?= form_error('no_tlp', '<small class="text-danger pl-3">', '</small>'); ?>
+            </div>
         </div>	 
-         
+
 	    <div class="control-group">
             <label class="control-label" for="password1">Password </label>
             <div class="controls">
@@ -50,7 +56,15 @@
             <input type="password" id="password2" name="password2" placeholder="Ulangi Password">
             <?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
-	    </div>	  
+        </div>
+        	  
+	    <!-- <div class="control-group">
+            <label class="control-label" for="image">Foto Profil </label>
+            <div class="controls">
+            <input type="file" id="image" name="image" >
+            <?= form_error('image', '<small class="text-danger pl-3">', '</small>'); ?>
+            </div>
+	    </div>	   -->
 	
 	    <button type="submit" class="btn btn-success btn-user ">
             Register Account

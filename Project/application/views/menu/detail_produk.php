@@ -15,9 +15,15 @@
       <div class="card-header py-3">
       </div>
       <div class="card-body">
+      <!-- <div id="gallery" class="span3">
+				<a href="<?= base_url('uploads/produk/') . $dt['gambar'];?>" title=<?= $dt['nama_barang'];?>>
+					<img src="<?= base_url('uploads/produk/') . $dt['gambar'];?>" style="width:400px;" alt=<?= $dt['nama_barang'];?>/>
+				</a>
+			</div> -->
+      <div id="gallery" class="span3">
 
-        <img src="<?= base_url('uploads/produk/') . $dt['gambar'];?>" alt="gambar produk" class="logo-komunitas mx-auto d-block mb-5" style="width:300px;">
-
+        <img src="<?= base_url('uploads/produk/') . $dt['gambar'];?>" alt="gambar produk" class="logo-komunitas mx-auto d-block mb-5" style="width:500px;">
+      </div>
         <div class="row">
           <div class="my-auto col-sm-2">
             <p>Nama Barang : </p>
@@ -27,8 +33,6 @@
           </div>
         </div>
 
-       
-
         <div class="row">
           <div class="my-auto col-sm-2">
             <p>Harga : </p>
@@ -37,6 +41,16 @@
             <p><?= $dt['harga']; ?></p>
           </div>
         </div>
+
+        <div class="row">
+          <div class="my-auto col-sm-2">
+            <p>Stok : </p>
+          </div>
+          <div class="my-auto col-sm-9">
+            <p><?= $dt['stok']; ?></p>
+          </div>
+        </div>
+
         <div class="row">
           <div class="my-auto col-sm-2">
             <p>Deskripsi : </p>

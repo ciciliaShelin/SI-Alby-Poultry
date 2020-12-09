@@ -57,4 +57,6 @@ class Produk extends CI_Controller
             $this->load->view('products/keranjang_belanja');
             $this->load->view('templates/shop_footer');
     }
+
+   
 }

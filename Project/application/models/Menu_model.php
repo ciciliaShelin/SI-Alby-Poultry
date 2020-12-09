@@ -32,4 +32,21 @@ class Menu_model extends CI_Model
     {
         return $this->db->get_where("barang", ['id_barang' => $id])->result_array();
     }
+
+    public function update($data= array(),$id)
+    {
+        $this->load->database();
+        return $this->db->update("barang",$data , ["id_barang"=>$id]);
+     }
+
+     public function daftar_user()
+    {
+        $query = "SELECT * FROM user ";
+        return $this->db->query($query)->result_array();
+    }
+
+    public function detail_user($id)
+    {
+        return $this->db->get_where("user", ['id_user' => $id])->result_array();
+    }
 }

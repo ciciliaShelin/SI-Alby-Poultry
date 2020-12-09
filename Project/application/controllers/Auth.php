@@ -77,8 +77,11 @@ class Auth extends CI_Controller
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $user =  $this->db->get_where('user', ['email' => $email])->row_array();
+        $data['user'] = $this->db->get('user')->result_array();
 
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
+        $this->form_validation->set_rules('jenis_kelamin', 'jenis_kelamin', 'required|trim');
+        $this->form_validation->set_rules('no_tlp', 'no_tlp', 'required|trim');
         $this->form_validation->set_rules(
             'email',
             'Email',
@@ -106,16 +109,18 @@ class Auth extends CI_Controller
 
             $data['title'] = 'User Registration';
             $this->load->view('templates/shop_header', $data);
-            $this->load->view('templates/shop_sidebar');
-            $this->load->view('auth/registrasi_user');
+            $this->load->view('templates/shop_sidebar', $data);
+            $this->load->view('auth/registrasi_user', $data);
             $this->load->view('templates/shop_footer');
         } else {
+
             $data = [
                 'name' => htmlspecialchars($this->input->post('name', 'true')),
                 'email' => htmlspecialchars($this->input->post('email', 'true')),
-                'email' => htmlspecialchars($this->input->post('email', 'true')),
-                'image' => 'default.jpg',
+                'jenis_kelamin' => htmlspecialchars($this->input->post('jenis_kelamin', 'true')),
+                'no_tlp' => htmlspecialchars($this->input->post('no_tlp', 'true')),
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
+                // 'image' => $foto_user,
                 'role_id' => 2,
                 'is_active' => 1,
                 'date_creater' => time()
@@ -124,8 +129,9 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Congratulation! Your account has been created. Please Login!</div>');
             redirect('auth/login');
-        }
-    }
+        } 
+
+    } 
 
     public function logout()
     {
