@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2020 at 09:27 AM
+-- Generation Time: Dec 11, 2020 at 12:16 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -25,29 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id_admin` int(11) NOT NULL,
-  `username` varchar(30) NOT NULL,
-  `nama_admin` varchar(30) NOT NULL,
-  `email` varchar(25) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `alamat_admin` varchar(50) NOT NULL,
-  `gambar` varchar(55) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id_admin`, `username`, `nama_admin`, `email`, `password`, `alamat_admin`, `gambar`) VALUES
-(2, 'e41180808', 'Eva Agustin', 'evaagustin766@gmail.com', '123456', 'jember', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `barang`
 --
 
@@ -65,7 +42,18 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `deskripsi`, `harga`, `stok`, `gambar_brg`) VALUES
-(1, 'Talang Pakan', 'Tempat Makanan Ayam', 9000, 2498, 'talangpakan.jpg');
+(1, 'Talang Pakan', 'Tempat Makanan Ayam', 9000, 2497, 'talangpakan.jpg'),
+(14, 'Gasolek', 'Pemanas Ruangan Kandang', 1250000, 1000, 'gasolek.jpg'),
+(15, 'Super Feeder', 'Tempat pakan ayam inovasi baru', 20000, 1000, 'superfeeder.jpg'),
+(16, 'Baby Chick Feeder', 'Tempat pakan anak ayam', 14000, 1000, 'babychick.jpg'),
+(17, 'TMAO', 'Tempat Minum Ayam Otomatis', 125000, 1000, 'otomatis.jpg'),
+(18, 'TMAM', 'Tempat Minum Ayam Manual', 16000, 1000, 'tempatminummanual.jpg'),
+(19, 'Baterai 4', 'Kandang Ayam Pintu 4', 135000, 1000, 'kandang galvanis 4 pintu.jpg'),
+(20, 'Baterai 6', 'Kandang Ayam Pintu 6', 160000, 1000, 'kandang galvanis 6 pintu.jpeg'),
+(21, 'Fortevit (250 gr)', 'Vitamin Pertumbuhan dan Pencegah Stress', 179800, 1000, 'fortevit1.jpg'),
+(22, 'Egg Stimulan (100 gr)', 'Vitamin Ayam Bertelur', 17500, 1000, 'vitamin egg stimulant.jpg'),
+(23, 'Rak Telur', 'Rak Telur Ayam Plastik', 12000, 1000, 'raktelurpl.jpg'),
+(24, 'Niple Drinker', 'Alat Minum Ayam', 4000, 1000, 'nipeldrinker.jpg');
 
 -- --------------------------------------------------------
 
@@ -88,7 +76,8 @@ CREATE TABLE `invoice` (
 INSERT INTO `invoice` (`id_invoice`, `nama`, `alamat`, `tgl_pesan`, `batas_bayar`) VALUES
 (1, 'Eva', 'Ngepeh', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'Risa', 'Jember', '2020-12-03 20:29:56', '2020-12-04 20:29:56'),
-(3, 'Sindi', 'Ngepeh', '2020-12-07 13:56:57', '2020-12-08 13:56:57');
+(3, 'Sindi', 'Ngepeh', '2020-12-07 13:56:57', '2020-12-08 13:56:57'),
+(4, 'Eva', 'Ngepeh', '2020-12-08 15:49:54', '2020-12-09 15:49:54');
 
 -- --------------------------------------------------------
 
@@ -179,11 +168,19 @@ CREATE TABLE `pembeli` (
   `nama_pembeli` varchar(50) NOT NULL,
   `jenis_kelamin` varchar(11) NOT NULL,
   `no_tlp` varchar(14) NOT NULL,
+  `username` varchar(20) NOT NULL,
   `email` varchar(35) NOT NULL,
   `password` varchar(15) NOT NULL,
   `alamat` varchar(50) NOT NULL,
   `pas_foto` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pembeli`
+--
+
+INSERT INTO `pembeli` (`id_pembeli`, `nama_pembeli`, `jenis_kelamin`, `no_tlp`, `username`, `email`, `password`, `alamat`, `pas_foto`) VALUES
+(1, 'Eva Agustin', 'Perempuan', '085784594914', 'evarahayu', 'evaagustin766@gmail.com', '1234', 'Ngepeh', '');
 
 -- --------------------------------------------------------
 
@@ -208,7 +205,8 @@ CREATE TABLE `pesanan` (
 INSERT INTO `pesanan` (`id`, `id_invoice`, `id_barang`, `nama_barang`, `jumlah`, `harga`, `pilihan`) VALUES
 (1, 1, 1, 'Talang Pakan', 1, 9000, ''),
 (2, 2, 1, 'Talang Pakan', 1, 9000, ''),
-(3, 3, 1, 'Talang Pakan', 2, 9000, '');
+(3, 3, 1, 'Talang Pakan', 2, 9000, ''),
+(4, 4, 1, 'Talang Pakan', 1, 9000, '');
 
 --
 -- Triggers `pesanan`
@@ -246,15 +244,35 @@ CREATE TABLE `transaksi` (
   `grand_total` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `no_tlp` varchar(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `role_id` tinyint(1) NOT NULL,
+  `gambar` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `nama`, `no_tlp`, `email`, `username`, `password`, `role_id`, `gambar`) VALUES
+(2, 'Eva', '', 'evarahayu766@gmail.com', 'macarina', '123456', 1, ''),
+(5, 'Triana', '085784594914', 'ketrinmarga@gmail.com', 'ana123', 'vava', 2, ''),
+(6, 'Ketrina', '081234567821', 'ketrina@gmail.com', 'admin', '1234', 1, '');
+
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `barang`
@@ -312,26 +330,26 @@ ALTER TABLE `transaksi`
   ADD KEY `id_pembeli` (`id_pembeli`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `user`
 --
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `id_invoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_invoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kab`
@@ -355,13 +373,13 @@ ALTER TABLE `kel`
 -- AUTO_INCREMENT for table `pembeli`
 --
 ALTER TABLE `pembeli`
-  MODIFY `id_pembeli` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pembeli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `testi`
@@ -374,6 +392,12 @@ ALTER TABLE `testi`
 --
 ALTER TABLE `transaksi`
   MODIFY `id_transaksi` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
