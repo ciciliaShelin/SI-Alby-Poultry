@@ -22,10 +22,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</br>
-</br>
-</br>
-</br>
 <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container align-items-center justify-content-center">
       	

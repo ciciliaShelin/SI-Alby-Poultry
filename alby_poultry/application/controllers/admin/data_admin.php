@@ -1,6 +1,18 @@
 <?php
 
 class Data_admin extends CI_Controller {
+
+    public function __construct(){
+        parent::__construct();
+
+        if ($this->session->userdata('role_id') != '1'){
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Anda Belum Login!!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>');
+          redirect('admin/login/index');
+        }
+    }
     public function index ()
     {
 
@@ -14,10 +26,10 @@ class Data_admin extends CI_Controller {
     public function tambah_aksi()
     {
         $username           = $this->input->post('username');
-        $nama_admin         = $this->input->post('nama_admin');
+        $nama               = $this->input->post('nama');
         $email              = $this->input->post('email');
         $password           = $this->input->post('password');
-        $alamat_admin       = $this->input->post('alamat_admin');
+        $role_id            = $this->input->post('role_id');
         $gambar             = $_FILES ['gambar']['name'];
         if ($gambar=''){}else{
             $config ['upload_path'] = './upload';
@@ -32,21 +44,21 @@ class Data_admin extends CI_Controller {
         }
         $data = array (
             'username'      => $username,
-            'nama_admin'    => $nama_admin,
+            'nama'    => $nama,
             'email'         => $email,
             'password'      => $password,
-            'alamat_admin'  => $alamat_admin,
+            'role_id'       => $role_id,
             'gambar'        => $gambar,
         );
 
-        $this->model_admin->tambah_admin($data, 'admin');
+        $this->model_admin->tambah_admin($data, 'user');
         redirect ('admin/data_admin/index');
     }
 
     public function edit($id)
     {
-        $where = array('id_admin'=>$id);
-        $data['admin'] = $this->model_admin->edit_admin($where,'admin')->result();
+        $where = array('id'=>$id);
+        $data['admin'] = $this->model_admin->edit_admin($where,'user')->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/edit_admin', $data);
@@ -55,31 +67,31 @@ class Data_admin extends CI_Controller {
 
     public function update(){
        
-        $id                 = $this->input->post('id_admin');
+        $id                 = $this->input->post('id');
         $username           = $this->input->post('username');
-        $nama_admin         = $this->input->post('nama_admin');
+        $nama               = $this->input->post('nama');
         $email              = $this->input->post('email');
         $password           = $this->input->post('password');
-        $alamat_admin       = $this->input->post('alamat_admin');
+        $role_id            = $this->input->post('role_id');
     
 
         $data = array (
             'username'      => $username,
-            'nama_admin'    => $nama_admin,
+            'nama'          => $nama,
             'email'         => $email,
             'password'      => $password,
-            'alamat_admin'  => $alamat_admin,
+            'role_id'       => $role_id,
         );
         $where = array(
-            'id_admin' => $id
+            'id' => $id
         );
-        $this->model_admin->update_data($where,$data, 'admin');
+        $this->model_admin->update_data($where,$data, 'user');
         redirect ('admin/data_admin/index');
     }
 
     public function hapus($id){
-        $where = array ('id_admin'=> $id);
-        $this->model_admin->hapus_data($where, 'admin');
+        $where = array ('id'=> $id);
+        $this->model_admin->hapus_data($where, 'user');
         redirect('admin/data_admin/index');
     }
 
