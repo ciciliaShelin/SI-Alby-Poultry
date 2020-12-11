@@ -109,7 +109,7 @@
               <tr>
               <td width="150px"><h5>Insagram</h5></td>
               <td width ="10px"><h5>:</h5></td>
-              <td width="500px"><h5>macarina.id</h5></td>
+              <td width="500px"><h5>albypoultry.id</h5></td>
               </tr>
               </table>
               </div>

@@ -6,6 +6,7 @@
             <th>NO</th>
             <th>USERNAME </th>
             <th>NAMA</th>
+            <th>NO TELEPON</th>
             <th>EMAIL</th>
             <th>PASSWORD</th>
             <th>ROLE ID</th>
@@ -20,6 +21,7 @@ foreach ($admin as $adm) : ?>
      <td><?php echo $no++ ?> </td>
      <td><?php echo $adm->username?> </td>
      <td><?php echo $adm->nama?> </td>
+     <td><?php echo $adm->no_tlp?> </td>
      <td><?php echo $adm->email?> </td>
      <td><?php echo $adm->password?> </td>
      <td><?php echo $adm->role_id?> </td>
@@ -53,6 +55,11 @@ foreach ($admin as $adm) : ?>
         <div class="form-group">
         <label> Nama </label>
         <input type="text" name="nama" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <label> No Telepon </label>
+        <input type="text" name="no_tlp" class="form-control">
         </div>
 
         <div class="form-group">

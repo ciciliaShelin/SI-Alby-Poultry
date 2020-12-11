@@ -27,6 +27,7 @@ class Data_admin extends CI_Controller {
     {
         $username           = $this->input->post('username');
         $nama               = $this->input->post('nama');
+        $no_tlp             = $this->input->post('no_tlp');
         $email              = $this->input->post('email');
         $password           = $this->input->post('password');
         $role_id            = $this->input->post('role_id');
@@ -44,7 +45,8 @@ class Data_admin extends CI_Controller {
         }
         $data = array (
             'username'      => $username,
-            'nama'    => $nama,
+            'nama'          => $nama,
+            'no_tlp'        => $no_tlp,
             'email'         => $email,
             'password'      => $password,
             'role_id'       => $role_id,
@@ -70,6 +72,7 @@ class Data_admin extends CI_Controller {
         $id                 = $this->input->post('id');
         $username           = $this->input->post('username');
         $nama               = $this->input->post('nama');
+        $no_tlp             = $this->input->post('no_tlp');
         $email              = $this->input->post('email');
         $password           = $this->input->post('password');
         $role_id            = $this->input->post('role_id');
@@ -78,6 +81,7 @@ class Data_admin extends CI_Controller {
         $data = array (
             'username'      => $username,
             'nama'          => $nama,
+            'no_tlp'        => $no_tlp,
             'email'         => $email,
             'password'      => $password,
             'role_id'       => $role_id,
