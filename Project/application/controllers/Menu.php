@@ -7,9 +7,8 @@ class Menu extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Menu_model', 'produk');
-        
+        apakah_sudah_login();
     }
-
 
 
     public function daftar_produk()
@@ -19,6 +18,7 @@ class Menu extends CI_Controller
         $data['barang'] = $this->db->get('barang')->result_array();
         $this->load->helper(array('form', 'url'));
 
+       
         $data['MenuProduk'] = $this->produk->menuproduk();
 
         $this->form_validation->set_rules('nama_barang', 'nama_barang', 'required');
@@ -73,6 +73,7 @@ class Menu extends CI_Controller
         $data['title'] = 'Detail Produk';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['barang'] = $this->db->get('barang')->result_array();
+
         $data['DetailProduk'] = $this->produk->detail_produk($id);
 
         $this->load->view('templates/header', $data);
@@ -84,6 +85,7 @@ class Menu extends CI_Controller
 
     public function hapus($id)
     {
+        $this->load->model('Menu_model', 'produk');
         $data = $this->produk->delete_produk($id);
 
         if ($data) {
@@ -106,6 +108,7 @@ class Menu extends CI_Controller
         $data['barang'] = $this->db->get('barang')->result_array();
         $this->load->helper(array('form', 'url'));
 
+        $this->load->model('Menu_model', 'produk');
         $data['DetailProduk'] = $this->produk->detail_produk($id);
 
         $this->form_validation->set_rules('nama_barang', 'nama_barang', 'required');

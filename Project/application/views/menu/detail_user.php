@@ -8,7 +8,7 @@
     <?php foreach ($DetailUser as $du):?>
 
         <div id="gallery" class="span3">
-            <img src="<?= base_url('uploads/produk/') . $du['image'];?>" alt="gambar produk" class="logo-komunitas mx-auto d-block mb-5" style="width:500px;">
+            <img src="<?= base_url('uploads/profile/') . $du['image'];?>" alt="foto user" class="logo-komunitas mx-auto d-block mb-5" style="width:250px; height: 250px;">
         </div>
 
 
@@ -85,7 +85,7 @@
                 <a href="mailto: <?= $du['email'];?> " class="btn btn-danger">
                 <i class="glyphicon glyphicon-envelope"></i>Kirim Email</a>
 <?php endforeach; ?>
-                <a href="<?php echo base_url('user/daftar_user'); ?>" class="btn btn-danger ">
+                <a href="<?php echo base_url('admin/daftar_user'); ?>" class="btn btn-danger ">
                 <span class="icon text-white-50">
                   <i class="fas fa-reply"></i>
                 </span>

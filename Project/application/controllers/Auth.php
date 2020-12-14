@@ -120,7 +120,7 @@ class Auth extends CI_Controller
                 'jenis_kelamin' => htmlspecialchars($this->input->post('jenis_kelamin', 'true')),
                 'no_tlp' => htmlspecialchars($this->input->post('no_tlp', 'true')),
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-                // 'image' => $foto_user,
+                'image' => 'default.jpg',
                 'role_id' => 2,
                 'is_active' => 1,
                 'date_creater' => time()
@@ -141,5 +141,10 @@ class Auth extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         You have been logged out!</div>');
         redirect('auth/login');
+    }
+
+    public function blocked()
+    {
+        $this->load->view('auth/blocked');
     }
 }

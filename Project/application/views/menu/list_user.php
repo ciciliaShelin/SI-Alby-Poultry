@@ -30,7 +30,7 @@
                                     <td><?= $mp['name']; ?></td>
                                     <td><?= $mp['email']; ?></td>
                                     <td>
-                                        <a href="<?php echo base_url("user/detail_user/".$mp['id_user']);?>" class="badge badge-success">detail</a>
+                                        <a href="<?php echo base_url("admin/detail_user/".$mp['id_user']);?>" class="badge badge-success">detail</a>
                                     </td>
                                 </tr>
                         <?php $i++; ?>

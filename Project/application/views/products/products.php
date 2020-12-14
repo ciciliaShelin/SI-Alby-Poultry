@@ -37,7 +37,7 @@
 		<div class="row">	
 			<?php foreach ($MenuProduk as $mp) : ?>  
 			<div class="span2">
-				<img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" alt=""/>
+				<img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" alt="" style="width: 300px; height:250px;"/>
 				
 			</div>
 			<div class="span4">
@@ -76,7 +76,7 @@
 		<?php foreach ($MenuProduk as $mp) : ?>  
 			<li class="span3">
 			  <div class="thumbnail">
-				<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"><img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" style="width: 300px;" alt=""/></a>
+				<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"><img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" style="width: 300px; height:250px;" alt=""/></a>
 				<div class="caption">
 				  <h5><?= $mp['nama_barang']; ?></h5>
 				  <!-- <p> 
