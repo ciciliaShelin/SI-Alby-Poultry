@@ -1,14 +1,15 @@
 <div class="container-fluid">
-    <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_admin"><i class="fas fa-plus fa-sm"> </i>Tambah Admin</button>
+    <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_admin"><i class="fas fa-plus fa-sm"> </i>Tambah User</button>
 
     <table class="table table-bordered">
         <tr>
             <th>NO</th>
             <th>USERNAME </th>
-            <th>NAMA ADMIN</th>
+            <th>NAMA</th>
+            <th>NO TELEPON</th>
             <th>EMAIL</th>
             <th>PASSWORD</th>
-            <th>ALAMAT</th>
+            <th>ROLE ID</th>
             <th colspan="3">AKSI</th>
 </tr>
 
@@ -19,13 +20,14 @@ foreach ($admin as $adm) : ?>
 <tr>
      <td><?php echo $no++ ?> </td>
      <td><?php echo $adm->username?> </td>
-     <td><?php echo $adm->nama_admin?> </td>
+     <td><?php echo $adm->nama?> </td>
+     <td><?php echo $adm->no_tlp?> </td>
      <td><?php echo $adm->email?> </td>
      <td><?php echo $adm->password?> </td>
-     <td><?php echo $adm->alamat_admin?> </td>
+     <td><?php echo $adm->role_id?> </td>
      <td> <div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div></td>
-     <td><?php echo anchor ('admin/data_admin/edit/' .$adm->id_admin,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?> </td>
-     <td><?php echo anchor('admin/data_admin/hapus/' .$adm->id_admin,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
+     <td><?php echo anchor ('admin/data_admin/edit/' .$adm->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?> </td>
+     <td><?php echo anchor('admin/data_admin/hapus/' .$adm->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
 
 </tr>
 <?php endforeach;  ?>
@@ -51,8 +53,13 @@ foreach ($admin as $adm) : ?>
         </div>
 
         <div class="form-group">
-        <label> Nama admin </label>
-        <input type="text" name="nama_admin" class="form-control">
+        <label> Nama </label>
+        <input type="text" name="nama" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <label> No Telepon </label>
+        <input type="text" name="no_tlp" class="form-control">
         </div>
 
         <div class="form-group">
@@ -66,8 +73,8 @@ foreach ($admin as $adm) : ?>
         </div>
 
         <div class="form-group">
-        <label> Alamat </label>
-        <input type="text" name="alamat_admin" class="form-control">
+        <label> Role Id </label>
+        <input type="text" name="role_id" class="form-control">
         </div>
 
         <div class="form-group">
