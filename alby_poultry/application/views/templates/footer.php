@@ -16,7 +16,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Kenapa Alby Poultry?</h2>
-              <p>Alby Poultry merupakan toko yang berdiri sejak tahun 2012.Toko ini bergerak dalam bidang usaha Supplier Sapronak seperti : Tempat Minum ayam otomatis (TMAO), Tempat Pakan Ayam (TPA), Baby Chick Feeder (BCF) untuk anak ayam, Pemanas Anak Ayam/Gas Brooder, NIPPLE, dll.</p>
+              <p>Alby Poultry merupakan toko yang berdiri sejak tahun 2017.Toko ini bergerak dalam bidang usaha Supplier Sapronak seperti : Tempat Minum ayam otomatis (TMAO), Tempat Pakan Ayam (TPA), Baby Chick Feeder (BCF) untuk anak ayam, Pemanas Anak Ayam/Gas Brooder, NIPPLE, dll.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="https://www.facebook.com/macarina.id/"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="https://www.instagram.com/macarina.id/"><span class="icon-instagram"></span></a></li>

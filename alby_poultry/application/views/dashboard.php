@@ -44,7 +44,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title" align="center"> What is Alby Poultry? </h2>
-                        <p align="justify"> Alby Poultry merupakan toko yang berdiri sejak tahun 2012.Toko ini bergerak dalam bidang usaha Supplier Sapronak seperti : Tempat Minum ayam otomatis (TMAO), Tempat Pakan Ayam (TPA), Baby Chick Feeder (BCF) untuk anak ayam, Pemanas Anak Ayam/Gas Brooder, NIPPLE, dll. Melalui situs ini, Anda akan mendapatkan produk peralatan kandang langsung dari produsennya.Karna langsung dari produsennya otomatis Anda akan mendapatkan barang yang lebih murah dari pasaran.  Dengan harga murah dan terjangkau, dengan sistem terima barang pesanan di alamat masing-masing.</p>
+                        <p align="justify"> Alby Poultry merupakan toko yang berdiri sejak tahun 2017.Toko ini bergerak dalam bidang usaha Supplier Sapronak seperti : Tempat Minum ayam otomatis (TMAO), Tempat Pakan Ayam (TPA), Baby Chick Feeder (BCF) untuk anak ayam, Pemanas Anak Ayam/Gas Brooder, NIPPLE, dll. Melalui situs ini, Anda akan mendapatkan produk peralatan kandang langsung dari produsennya.Karna langsung dari produsennya otomatis Anda akan mendapatkan barang yang lebih murah dari pasaran.  Dengan harga murah dan terjangkau, dengan sistem terima barang pesanan di alamat masing-masing.</p>
                         <p > Buat kamu yang ingin mencari barang barang ternak, <h6 class="block-title"> DISINILAH SOLUSINYA!!!! </h6> </p>
                         <p ><a href="dashboard/shop" class="smoothscroll btn btn-primary">Beli Sekarang</a></p>
                     </div>
