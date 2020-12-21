@@ -36,7 +36,7 @@
                 </div>
                 <div class="control-group">
                     <div class="controls">
-                        <a href="forgetpass.html" style="text-decoration:underline">Forgot password ?</a>
+                        <a href="<?= base_url('auth/forgotPass'); ?>" style="text-decoration:underline">Forgot password ?</a>
                     </div>
                 </div>
             </form>

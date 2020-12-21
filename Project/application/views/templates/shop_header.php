@@ -31,6 +31,13 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= base_url('assets/'); ?>themes/images/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="<?= base_url('assets/'); ?>themes/images/ico/apple-touch-icon-57-precomposed.png">
 	<style type="text/css" id="enject"></style>
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -100,14 +107,14 @@
 
 										</form>
 
-										<a class="small" href="forgot-password.html">Forgot Password?</a>
+										<a class="small" href="<?= base_url('auth/forgotPass'); ?>">Forgot Password?</a>
 										<a class="small" href="<?= base_url('auth/registration'); ?>">Create an Account!</a>
 
 									</div>
 								</div>
 
 							<?php else : ?>
-								<li class=""><a href="contact.html">Akun</a></li>
+								<li class=""><a href="<?= base_url('user/akun'); ?>">Akun</a></li>
 								<a href="#login" role="button" data-toggle="modal" data-target="#logoutModal" style="padding-right:0"><span class="btn btn-large btn-success">Logout</span></a>
 								<!-- <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">
 									<div class="modal-header">

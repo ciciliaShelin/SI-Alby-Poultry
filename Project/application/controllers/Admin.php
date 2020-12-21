@@ -74,7 +74,9 @@ class Admin extends CI_Controller
             {
                 $name = $this->input->post('name');
                 $email = $this->input->post('email');
-
+                $jk = $this->input->post('jenis_kelamin');
+                $no_tlp = $this->input->post('no_tlp');
+                $alamat = $this->input->post('alamat');
                 //cek jika ada gambar yang akan diupload
                 $upload_image= $_FILES['image'] ['name'];
 
@@ -83,22 +85,29 @@ class Admin extends CI_Controller
                     $config['max_size'] = '2048';
                     $config['overwrite'] = true;
                     $config['upload_path'] = './uploads/profile/';
-                    $this->load->library('upload', '$config');
+                    $this->load->library('upload', $config);
 
 
                     if($this->upload->do_upload('image')) {
-                        $old_image= $data['user'] ['image'];
+                        $data = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+                        $old_image= $data['image'];
                         if($old_image != 'default.jpg') {
                             unlink(FCPATH. 'uploads/profile/' . $old_image);
                         }
                         $new_image= $this->upload->data('file_name');
                         $this->db->set('image', $new_image);
                     } else {
-                        echo $this->upload->display_errors();
+                        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">'
+                        . $this->upload->display_errors().
+                        '</div>');
+                        redirect('admin/edit');
                     }
                 }
-
+                $this->db->set('image', $new_image);
                 $this->db->set('name', $name);
+                $this->db->set('jenis_kelamin', $jk);
+                $this->db->set('no_tlp', $no_tlp);
+                $this->db->set('alamat', $alamat);
                 $this->db->where('email', $email);
                 $this->db->update('user');
 

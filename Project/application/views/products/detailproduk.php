@@ -8,8 +8,8 @@
 	<div class="row">	
 	<?php foreach ($Detailproduk as $dt):?>  
 			<div id="gallery" class="span3">
-				<a href="<?= base_url('uploads/produk/') . $dt['gambar'];?>" title=<?= $dt['nama_barang'];?>>
-					<img src="<?= base_url('uploads/produk/') . $dt['gambar'];?>" style="width:100%" alt=<?= $dt['nama_barang'];?>/>
+				<a href="<?= base_url('uploads/produk/') . $dt['gambar'];?>" title=<?= $dt['nama_barang'];?> >
+					<img src="<?= base_url('uploads/produk/') . $dt['gambar'];?>"  alt=<?= $dt['nama_barang'];?> style="width: 300px; height:250px;"/>
 				</a>
 			</div>
 			<div class="span6">

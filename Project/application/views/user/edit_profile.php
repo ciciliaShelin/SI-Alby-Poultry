@@ -1,13 +1,21 @@
-
+<div class="span9">
+     <div class="row">
+    <ul class="breadcrumb">
+		<li><a href="<?= base_url('produk/semuaproduk'); ?>">Home</a> <span class="divider">/</span></li>
+		<li class="active"><?= $title; ?></li>
+    </ul>
+    <h3 class="h3 mb-4 text-gray-800"><?= $title; ?></h3>	
+    <?= $this->session->flashdata('message'); ?>
+	<div class="well">
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-        <?= $this->session->flashdata('message'); ?>
+
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+          
 
 
-          <div class="row">
+         
                 <div class="col-lg-8">
                     
                     <form action="<?= base_url('admin/edit') ?>" method="post" enctype="multipart/form-data">
@@ -82,7 +90,7 @@
                           </div>
                         </div>
 
-</form>
+                    </form>
 
                 </div>
           </div>
@@ -90,9 +98,12 @@
 
 
         </div>
-        <!-- /.container-fluid -->
 
-      </div>
-      <!-- End of Main Content -->
+    </div>
 
+</div>
+</div>
+</div>
+</div>
+       
 

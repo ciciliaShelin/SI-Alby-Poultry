@@ -15,7 +15,7 @@
 			<li class="span3">
 			<div class="thumbnail">
 				<i class=""></i>
-					<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"><img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" alt=""></a>
+					<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"><img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" alt="" style="width: 300px; height:250px;"></a>
 					<div class="caption">
 					  <h5><?= $mp['nama_barang']; ?></h5>
 					  <h4><a class="btn" href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>">VIEW</a> <span class="pull-right">$222.00</span></h4>
@@ -33,7 +33,7 @@
 			  </div>
 		</div>
 
-		<h4>Latest Products </h4>
+		<!-- <h4>Latest Products </h4>
 			  <ul class="thumbnails">
 				<li class="span3">
 				  <div class="thumbnail">
@@ -49,7 +49,7 @@
 				  </div>
 				</li>
 
-			  </ul>	
+			  </ul>	 -->
 
 		</div>
 		</div>

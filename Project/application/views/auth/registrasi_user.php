@@ -28,8 +28,8 @@
 		<div class="control-group">
             <label class="control-label" for="email">Jenis Kelamin </label>
             <div class="controls">
-            <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="LAKI-LAKI" checked="checked"> Laki-laki
-            <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value= "PEREMPUAN"> Perempuan
+            <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="LAKI-LAKI" > LAKI-LAKI
+            <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value= "PEREMPUAN"> PEREMPUAN
             <?= form_error('jenis_kelamin', '<small class="text-danger pl-3">', '</small>'); ?>
             </div>
         </div>
@@ -74,7 +74,7 @@
     
     <hr>
                         <div class="text-center">
-                            <a class="small" href="forgot-password.html">Forgot Password?</a>
+                            <a class="small" href="<?= base_url('auth/forgotPass'); ?>">Forgot Password?</a>
                         </div>
                         <div class="text-center">
                             <a class="small" href="<?= base_url('auth/login'); ?>">Already have an account? Login!</a>
