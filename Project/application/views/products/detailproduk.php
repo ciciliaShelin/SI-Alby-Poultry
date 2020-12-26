@@ -16,11 +16,16 @@
 				<h3><?= $dt['nama_barang'];?>  </h3>
 				<h4 style="color:red">100 items in stock</h4>
 				<hr class="soft"/>
-				<form class="form-horizontal qtyFrm">
+				<form action="<?= base_url();?>transaksi/tambah" method="post" class="form-horizontal qtyFrm">
 				  <div class="control-group">
-					<label class="control-label"><span>Rp ...</span></label>
+					<label class="control-label"><span>Rp. <?= number_format($dt['harga'],0,",",".");?></span></label>
 					<div class="controls">
-					<input type="number" class="span1" placeholder="Qty."/>
+					<!-- <input type="number" class="span1" placeholder="Qty."/> -->
+					<input type="hidden" name="id" value="<?= $dt['id_barang']; ?>" />
+                	<input type="hidden" name="nama" value="<?= $dt['nama_barang']; ?>" />
+                  	<input type="hidden" name="harga" value="<?= $dt['harga']; ?>" />
+                  	<input type="hidden" name="gambar" value="<?= $dt['gambar']; ?>" />
+                  	<input type="hidden" name="qty" value="1" />
 					  <button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
 					</div>
 				  </div>

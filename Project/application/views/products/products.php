@@ -52,15 +52,19 @@
 			</div>
 			
 			<div class="span3 alignR">
-			<form class="form-horizontal qtyFrm">
+			<form action="<?= base_url();?>transaksi/tambah" method="post" class="form-horizontal qtyFrm">
                 <br>
-			<h4> Rp 50000</h4>
+			<h4>Rp. <?= number_format($mp['harga'], 0,",",".") ?></h4>
 			<!-- <label class="checkbox">
 				<input type="checkbox">  Adds product to compair
 			</label><br/> -->
-		
-			  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-			  <a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+					<input type="hidden" name="id" value="<?= $mp['id_barang']; ?>" />
+                	<input type="hidden" name="nama" value="<?= $mp['nama_barang']; ?>" />
+                  	<input type="hidden" name="harga" value="<?= $mp['harga']; ?>" />
+                  	<input type="hidden" name="gambar" value="<?= $mp['gambar']; ?>" />
+					  <input type="hidden" name="qty" value="1" />
+			  <button type="submit" class="btn btn-primary"> Add to <i class=" icon-shopping-cart"></i></button>
+			  <a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>" class="btn "><i class="icon-zoom-in"></i></a> <br> <br> <br>
 			</form>
 			</div>
 			<hr >
@@ -70,23 +74,32 @@
 		<hr class="soft"/>
 
 	</div>
-
+	<form action="<?= base_url();?>transaksi/tambah" method="post" >
+					<input type="hidden" name="id" value="<?= $mp['id_barang']; ?>" />
+                	<input type="hidden" name="nama" value="<?= $mp['nama_barang']; ?>" />
+                  	<input type="hidden" name="harga" value="<?= $mp['harga']; ?>" />
+                  	<input type="hidden" name="gambar" value="<?= $mp['gambar']; ?>" />
+                  	<input type="hidden" name="qty" value="1" />
 	<div class="tab-pane  active" id="blockView">
 		<ul class="thumbnails">
 		<?php foreach ($MenuProduk as $mp) : ?>  
 			<li class="span3">
 			  <div class="thumbnail">
 				<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"><img src="<?= base_url('uploads/produk/') . $mp['gambar'];?>" style="width: 220px; height:220px;" alt=""/></a>
-				<div class="caption">
+				<div class="caption" style="text-align:center">
 				  <h5><?= $mp['nama_barang']; ?></h5>
+				  <a > Rp. <?= number_format($mp['harga'], 0,",",".") ?></a>
 				  <!-- <p> 
 				  <?= $mp['deskripsi']; ?> 
 				  </p> -->
-				   <h4 style="text-align:center"><a class="btn" href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 				</div>
+				<h4 style="text-align:center"><a class="btn" href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"> <i class="icon-zoom-in"></i></a> 
+				<button type="submit" class="btn">Add to <i class="icon-shopping-cart"></i></button>
+				
+				</h4>
 			  </div>
 			</li>
-			
+		</form>
 			<?php endforeach; ?>
 		  </ul>
 	<hr class="soft"/>

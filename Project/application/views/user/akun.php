@@ -1,15 +1,16 @@
 <div class="span9">
     <ul class="breadcrumb">
 		<li><a href="<?= base_url('produk/semuaproduk'); ?>">Home</a> <span class="divider">/</span></li>
-		<li class="active"><?= $title; ?></li>
+        <li class="active"><?= $title; ?></li>
     </ul>
-    <h3 class="h3 mb-4 text-gray-800"><?= $title; ?></h3>	
+    <h3> <?= $title; ?><a href="<?= base_url('user'); ?>" class="btn pull-right"><i ></i>back to home </a></h3>	
+    <hr class="soft"/>
     <?= $this->session->flashdata('message'); ?>
-	<div class="well">
+	<div class="container">
 
         <div class="row">
 		    <div class="span2.5">
-                <img class="card-img-top" src="<?= base_url('uploads/profile/') .$user['image']; ?>" class="card-img" style="width:250px; height: 220px;">   
+                <img class="card-img-top" src="<?= base_url('uploads/profile/') .$user['image']; ?>" class="card-img" style="width:220px; height: 190px;">   
             </div>
 		    <div class="span4">
                 <h5 class="card-title">Nama :<?= $user['name']; ?></h5>

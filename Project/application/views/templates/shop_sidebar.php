@@ -8,14 +8,17 @@ $MenuProduk = $this->db->query($queryMenu)->result_array();
 	<div class="row">        
 <!-- Sidebar ================================================== -->
 <div id="sidebar" class="span3">
-		<div class="well well-small"><a id="myCart" href="<?= base_url('produk/keranjang_belanja'); ?>"><img src="<?= base_url('assets/'); ?>themes/images/ico-cart.png" alt="cart">3 Items in your cart  <span class="badge badge-warning pull-right">$155.00</span></a></div>
+		<div class="well well-small"><a id="myCart" href="<?= base_url('produk/keranjang_belanja'); ?>"><img src="<?= base_url('assets/'); ?>themes/images/ico-cart.png" alt="cart">
+		3 Items in your cart   <?php $keranjang = 'Keranjang Belanja : ' .$this->cart->total_items(). 'items'  ?>
+		<span class="badge badge-warning pull-right">$155.00</span></a></div>
+
 		<?php foreach ($MenuProduk as $mp) : ?> 
 		<ul id="sideManu" class="nav nav-tabs nav-stacked">
 			<li class="subMenu">
 				<a href="<?= base_url("produk/detailproduk/".$mp['id_barang']); ?>"> <?= $mp['nama_barang'];?> [<?= $mp['stok'];?>]</a>
 			</li>
-		<?php endforeach; ?>
 		</ul>
+		<?php endforeach; ?>
 		<br/>
 		  <!-- <div class="thumbnail">
 			<img src="<?= base_url('assets/'); ?>themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera"/>

@@ -153,7 +153,7 @@
 	<a href="<?= base_url('produk/semuaproduk'); ?>" class="btn btn-large"><i class="icon-arrow-left"></i> Lanjutkan Belanja </a>
 	<a href="<?= base_url('auth/login'); ?>" class="btn btn-large pull-right">Next <i class="icon-arrow-right"></i></a>
 	
-</div>
+</div>	
 </div></div>
 </div>
 <!-- MainBody End ============================= -->

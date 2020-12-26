@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database', 'cart', 'form_validation', 'session','upload');
+$autoload['libraries'] = array('session','database','mylibrary','pagination','table','form_validation','template','user_agent','email');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'form');
+$autoload['helper'] = array('url','form','cek','download','html');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('model_barang', 'model_admin', 'model_pembeli','model_invoice', 'model_daftar', 'model_login');
+$autoload['model'] = array('model_app','model_testimoni','model_gallery','model_rekening','model_members','model_download','model_auth','model_main','model_berita','model_halaman','model_menu','model_iklan','model_users','model_modul');

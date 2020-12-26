@@ -16,6 +16,9 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['barang'] = $this->db->get('barang')->result_array();
+
  
             $this->load->view('templates/shop_header', $data);
             // $this->load->view('shop/banner'); 
@@ -54,7 +57,7 @@ class Produk extends CI_Controller
             $this->load->view('templates/shop_header', $data);
             // $this->load->view('shop/banner'); 
             $this->load->view('templates/shop_sidebar');
-            $this->load->view('products/keranjang_belanja');
+            $this->load->view('shop/tampil_cart');
             $this->load->view('templates/shop_footer');
     }
 
