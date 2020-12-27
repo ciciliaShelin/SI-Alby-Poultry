@@ -21,13 +21,13 @@
                     <tr><th scope='row'>Ganti Foto</th>                     <td><input type='file' class='form-control' name='f'><hr style='margin:5px'>";
                                                                                  if ($rows['foto'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_user/$rows[foto]'>$rows[foto]</a>"; } echo "</td></tr></td></tr>";
                     if ($this->session->level == 'admin'){
-                      echo "<tr><th scope='row'>Blokir</th>                   <td>"; if ($rows['blokir']=='Y'){ echo "<input type='radio' name='h' value='Y' checked> Ya &nbsp; <input type='radio' name='h' value='N'> Tidak"; }else{ echo "<input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak"; } echo "</td></tr>
-                            <tr><th scope='row'>Tambah Akses</th>                    <td><div class='checkbox-scroll'>";
+                      echo "<tr hidden><th scope='row'>Blokir</th>                   <td>"; if ($rows['blokir']=='Y'){ echo "<input type='radio' name='h' value='Y' checked> Ya &nbsp; <input type='radio' name='h' value='N'> Tidak"; }else{ echo "<input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak"; } echo "</td></tr>
+                            <tr hidden><th scope='row'>Tambah Akses</th>                    <td><div class='checkbox-scroll'>";
                                                                                foreach ($record as $row){
                                                                                  echo "<span style='display:block'><input name='modul[]' type='checkbox' value='$row[id_modul]' /> $row[nama_modul]</span> ";
                                                                                }
                       echo "</div></td></tr>
-                      <tr><th scope='row'>Hak Akses</th>                    <td><div class='checkbox-scroll'>";
+                      <tr hidden><th scope='row'>Hak Akses</th>                    <td><div class='checkbox-scroll'>";
                                                                                foreach ($akses as $ro){
                                                                                  echo "<span style='display:block'><a class='text-danger' href='".base_url()."administrator/delete_akses/$ro[id_umod]/".$this->uri->segment(3)."'><span class='glyphicon glyphicon-remove'></span></a> $ro[nama_modul]</span> ";
                                                                                }
@@ -39,6 +39,7 @@
               <div class='box-footer'>
                     <button type='submit' name='submit' class='btn btn-info'>Update</button>
                     <a href='index.php'><button type='button' class='btn btn-default pull-right'>Cancel</button></a>
+                    <a class='pull-right btn btn-warning btn-sm' href='<?php echo base_url(); ?>administrator/konsumen'>Kembali</a>
                     
                   </div>
             </div></div></div>";

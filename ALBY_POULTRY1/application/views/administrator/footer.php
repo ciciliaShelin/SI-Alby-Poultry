@@ -1,2 +1,6 @@
 
-<strong>Copyright &copy; 2015 - <?php echo date('Y'); ?> <a target='_BLANK' href="#"> </a>.</strong> All rights reserved.
+<center>
+    <strong class='text-footer'>
+        Copyright &copy; Alby Poultry - <?php echo date('Y'); ?> <a target='_BLANK' href="#"> </a>- All rights reserved.
+    </strong>
+</center> 

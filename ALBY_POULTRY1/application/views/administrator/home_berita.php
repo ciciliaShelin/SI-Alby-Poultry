@@ -8,8 +8,9 @@
                   </div>
                 </div>
 
+                <!-- id="example1" -->
                 <div class="box-body">
-                    <table class='table table-hover table-condensed'>
+                    <table  class='table table-hover table-condensed'>
                         <thead>
                           <tr>
                             <th width="20px">No</th>
@@ -17,7 +18,7 @@
                             <th>Total Belanja</th>
                             <th>Status</th>
                             <th>Waktu</th>
-                            <th></th>
+                            <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -32,7 +33,11 @@
                                       <td style='color:red;'>Rp ".rupiah($total['total']+$total['ongkir']+substr($total['kode_transaksi'],-3))."</td>
                                       <td>$proses</td>
                                       <td>".cek_terakhir($row['waktu_transaksi'])." lalu</td>
-                                      <td width='50px'><a class='btn btn-info btn-xs' title='Detail data pesanan' href='".base_url()."administrator/tracking/$row[kode_transaksi]'><span class='glyphicon glyphicon-search'></span></a></td>
+                                      <td>
+                                      <a class='btn btn-info btn-xs' title='Detail data pesanan' href='".base_url()."administrator/tracking/$row[kode_transaksi]'><span class='glyphicon glyphicon-search'></span></a>
+                                      <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_transaksi/$row[kode_transaksi]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                      </td>
+                                     
                                    </tr>";
                               $no++;
                             }

@@ -1161,6 +1161,12 @@ class Administrator extends CI_Controller {
 		}
 	}
 
+		function delete_transaksi(){
+        cek_session_akses('konsumen',$this->session->id_session);
+		$id = array('id_penjualan' => $this->uri->segment(3));
+		$this->model_app->delete('rb_penjualan',$id);
+		redirect('administrator/home');
+		}
 	// Controller Modul Supplier
 
 	function supplier(){
