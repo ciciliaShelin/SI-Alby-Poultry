@@ -31,7 +31,7 @@ class Konfirmasi extends CI_Controller {
 				$data1 = array('proses'=>'2');
 				$where = array('id_penjualan' => $this->input->post('id'));
 				$this->model_app->update('rb_penjualan', $data1, $where);
-				echo $this->session->set_flashdata('message', '<div class="alert alert-info"><center>Success Melakukan Konfirmasi pembayaran... <br>
+				echo $this->session->set_flashdata('message', '<div class="alert alert-success"><center>Success Melakukan Konfirmasi pembayaran...
                                                                           akan segera kami cek dan proses!</center></div>');
 			redirect('konfirmasi/index');
 		}else{
@@ -63,9 +63,24 @@ class Konfirmasi extends CI_Controller {
 			if ($cek->num_rows()>=1){
 				$data['title'] = 'Tracking Order '.$kode_transaksi;
 				$data['kode_transaksi'] = $kode_transaksi;
-				$data['rows'] = $this->db->query("SELECT * FROM rb_penjualan a JOIN rb_konsumen b ON a.id_pembeli=b.id_konsumen JOIN rb_kota c ON b.kota_id=c.kota_id where a.kode_transaksi='$kode_transaksi'")->row_array();
-				$data['record'] = $this->db->query("SELECT a.kode_transaksi, b.*, c.nama_produk, c.satuan, c.berat, c.diskon, c.produk_seo FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk where a.kode_transaksi='".$kode_transaksi."'");
-				$data['total'] = $this->db->query("SELECT a.resi, a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk where a.kode_transaksi='".$kode_transaksi."'")->row_array();
+				$data['rows'] = $this->db->query("SELECT * 
+					FROM rb_penjualan a 
+					JOIN rb_konsumen b ON a.id_pembeli=b.id_konsumen 
+					JOIN rb_kota c ON b.kota_id=c.kota_id 
+					where a.kode_transaksi='$kode_transaksi'")->row_array();
+
+				$data['record'] = $this->db->query(
+					"SELECT a.kode_transaksi, b.*, c.nama_produk, c.satuan, c.berat, c.diskon, c.produk_seo 
+					FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan 
+					JOIN rb_produk c ON b.id_produk=c.id_produk 
+					where a.kode_transaksi='".$kode_transaksi."'");
+				
+				$data['total'] = $this->db->query(
+					"SELECT a.resi, a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat 
+					   FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan 
+					    JOIN rb_produk c ON b.id_produk=c.id_produk 
+					   where a.kode_transaksi='".$kode_transaksi."'")->row_array();
+
 				$this->template->load('phpmu-one/template','phpmu-one/pengunjung/view_tracking_view',$data);
 			}else{
 				redirect('konfirmasi/tracking');
@@ -73,6 +88,48 @@ class Konfirmasi extends CI_Controller {
 		}else{
 			$data['title'] = 'Tracking Order';
 			$this->template->load('phpmu-one/template','phpmu-one/pengunjung/view_tracking',$data);
+		}
+	}
+
+
+
+	function barang_diterima(){
+		if (isset($_POST['submit1']) OR $this->uri->segment(3)!=''){
+			if ($this->uri->segment(3)!=''){
+				$kode_transaksi = filter($this->uri->segment(3));
+			}else{
+				$kode_transaksi = filter($this->input->post('a'));
+			}
+
+			$cek = $this->model_app->view_where('rb_penjualan',array('kode_transaksi'=>$kode_transaksi));
+			if ($cek->num_rows()>=1){
+				$data['title'] = 'Tracking Order '.$kode_transaksi;
+				$data['kode_transaksi'] = $kode_transaksi;
+				$data['rows'] = $this->db->query("SELECT * 
+					FROM rb_penjualan a 
+					JOIN rb_konsumen b ON a.id_pembeli=b.id_konsumen 
+					JOIN rb_kota c ON b.kota_id=c.kota_id 
+					where a.kode_transaksi='$kode_transaksi'")->row_array();
+
+				$data['record'] = $this->db->query(
+					"SELECT a.kode_transaksi, b.*, c.nama_produk, c.satuan, c.berat, c.diskon, c.produk_seo 
+					FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan 
+					JOIN rb_produk c ON b.id_produk=c.id_produk 
+					where a.kode_transaksi='".$kode_transaksi."'");
+				
+				$data['total'] = $this->db->query(
+					"SELECT a.resi, a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat 
+					   FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan 
+					    JOIN rb_produk c ON b.id_produk=c.id_produk 
+					   where a.kode_transaksi='".$kode_transaksi."'")->row_array();
+
+				$this->template->load('phpmu-one/template','phpmu-one/pengunjung/view_barang_diterima',$data);
+			}else{
+				redirect('konfirmasi/barang_diterima');
+			}
+		}else{
+			$data['title'] = 'Konfirmasi';
+			$this->template->load('phpmu-one/template','phpmu-one/pengunjung/view_konfirmasi_pembayaran',$data);
 		}
 	}
 }

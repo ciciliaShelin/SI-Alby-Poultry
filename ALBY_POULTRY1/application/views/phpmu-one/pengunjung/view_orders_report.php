@@ -14,7 +14,11 @@
                   <?php 
                     $no = 1;
                     foreach ($record as $row){
-                    if ($row['proses']=='0'){ $proses = '<i class="text-danger">Pending</i>'; }elseif($row['proses']=='1'){ $proses = '<i class="text-warning">Proses</i>'; }elseif($row['proses']=='2'){ $proses = '<i class="text-info">Konfirmasi</i>'; }else{ $proses = '<i class="text-success">Packing </i>'; }
+                    if ($row['proses']=='0'){ $proses = '<i class="text-danger">Pending</i>'; }
+                    elseif($row['proses']=='1'){ $proses = '<i class="text-warning">Packing</i>'; }
+                    elseif($row['proses']=='2'){ $proses = '<i class="text-info">Konfirmasi</i>'; }
+                    elseif($row['proses']=='3'){ $proses = '<i class="text-success">Dikirim</i>'; }
+                    else{ $proses = '<i class="text-primary"> Diterima </i>'; }
                     $total = $this->db->query("SELECT a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk where a.kode_transaksi='$row[kode_transaksi]'")->row_array();
                     echo "<tr><td>$no</td>
                               <td><a href='".base_url()."konfirmasi/tracking/$row[kode_transaksi]'>$row[kode_transaksi]</a></td>

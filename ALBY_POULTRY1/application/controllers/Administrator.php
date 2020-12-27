@@ -1251,6 +1251,14 @@ class Administrator extends CI_Controller {
         $where = array('id_penjualan' => $this->uri->segment(3));
         $this->model_app->update('rb_penjualan', $data, $where);
         redirect('administrator/orders');
+	}
+	
+
+	function status_diterima(){
+		$data = array('proses'=>$this->uri->segment(4));
+        $where = array('id_penjualan' => $this->uri->segment(3));
+        $this->model_app->update('rb_penjualan', $data, $where);
+        redirect('members/history');
     }
 
 	function logout(){

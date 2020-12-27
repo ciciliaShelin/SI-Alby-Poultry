@@ -22,8 +22,21 @@
                                 <?php 
                                   $no = 1;
                                   foreach ($record->result_array() as $row){
-                                  if ($row['proses']=='0'){ $proses = '<i class="text-danger">Pending</i>'; $color = 'danger'; $text = 'Pending'; }elseif($row['proses']=='1'){ $proses = '<i class="text-warning">Proses</i>'; $color = 'warning'; $text = 'Proses'; }elseif($row['proses']=='2'){ $proses = '<i class="text-info">Konfirmasi</i>'; $color = 'info'; $text = 'Konfirmasi'; }else{ $proses = '<i class="text-success">Packing </i>'; $color = 'success'; $text = 'Packing'; }
-                                  $total = $this->db->query("SELECT a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, e.nama_kota, f.nama_provinsi, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) as total, sum(c.berat*b.jumlah) as total_berat FROM `rb_penjualan` a JOIN rb_penjualan_detail b ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk JOIN rb_konsumen d ON a.id_pembeli=d.id_konsumen JOIN rb_kota e ON d.kota_id=e.kota_id JOIN rb_provinsi f ON e.provinsi_id=f.provinsi_id where a.kode_transaksi='$row[kode_transaksi]'")->row_array();
+                                  if ($row['proses']=='0'){ $proses = '<i class="text-danger">Pending</i>'; $color = 'danger'; $text = 'Pending'; }
+                                  elseif($row['proses']=='1'){ $proses = '<i class="text-warning">Packing</i>'; $color = 'warning'; $text = 'Packing'; }
+                                  elseif($row['proses']=='2'){ $proses = '<i class="text-info">Konfirmasi</i>'; $color = 'info'; $text = 'Konfirmasi'; }
+                                  elseif($row['proses']=='3'){ $proses = '<i class="text-success">Dikirim</i>'; $color = 'success'; $text = 'Dikirim'; }
+                                  else{ $proses = '<i class="text-success">Diterima </i>'; $color = 'primary'; $text = 'Diterima'; }
+                                  $total = $this->db->query(
+                                    "SELECT a.kode_transaksi, a.kurir, a.service, a.proses, a.ongkir, e.nama_kota, f.nama_provinsi, sum((b.harga_jual*b.jumlah)-(c.diskon*b.jumlah)) 
+                                    as total, sum(c.berat*b.jumlah) as total_berat 
+                                    FROM `rb_penjualan` a 
+                                    JOIN rb_penjualan_detail b 
+                                    ON a.id_penjualan=b.id_penjualan JOIN rb_produk c ON b.id_produk=c.id_produk 
+                                    JOIN rb_konsumen d ON a.id_pembeli=d.id_konsumen 
+                                    JOIN rb_kota e ON d.kota_id=e.kota_id 
+                                    JOIN rb_provinsi f ON e.provinsi_id=f.provinsi_id 
+                                    where a.kode_transaksi='$row[kode_transaksi]'")->row_array();
                                   
                                   echo "<tr><td>$no</td>
                                             <td>$row[kode_transaksi]</td>
@@ -37,9 +50,10 @@
                                                 <button type='button' class='btn btn-$color btn-xs dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> <span class='caret'></span> <span class='sr-only'>Toggle Dropdown</span> </button> 
                                                   <ul class='dropdown-menu' style='border:1px solid #cecece;'> 
                                                     <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/0' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Pending ?')\"> Pending</a></li> 
-                                                    <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/1' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Proses ?')\"> Proses</a></li> 
+                                                    <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/1' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Packing ?')\"> Packing</a></li> 
                                                     <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/2' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Konfirmasi ?')\"> Konfirmasi</a></li> 
-                                                    <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/3' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Packing ?')\"> Packing</a></li> 
+                                                    <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/3' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Dikirim ?')\"> Dikirim</a></li> 
+                                                    <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/4' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Diterima ?')\"> Diterima</a></li> 
                                                   </ul> 
                                               </div>
                                             <a class='btn btn-info btn-xs' title='Detail data pesanan' href='".base_url()."administrator/tracking/$row[kode_transaksi]'><span class='glyphicon glyphicon-search'></span></a></td>
