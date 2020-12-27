@@ -6,8 +6,8 @@
 <body onload="window.print()">
 <?php 
 echo "<center><h2 style='margin-bottom:3px;'>ORDERS REPORT</h2>
-        Jl.Angkasa Puri 4, Perundam Tunggul Hitam, Padang<br>
-        No Telpon. 081267771344. Fax. 0751 461695</center><hr/>";
+        Jl.Bangka VIII, Masjid Al-Mubarrok, Sumbersari, Jember<br>
+        No Telpon. 085648399296</center><hr/>";
 ?>
 <table width='100%' border=1>
   <thead>
