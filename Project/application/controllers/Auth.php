@@ -305,7 +305,7 @@ class Auth extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Password has been changed. Please login!</div>');
-            redirect('auth/login');
+            redirect('auth/login'); 
         }
     }
 

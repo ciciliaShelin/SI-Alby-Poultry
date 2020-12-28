@@ -44,7 +44,8 @@
       <div class="modal-body">
       <?php
           $attributes3 = array('id' => 'formku','class'=>'form-horizontal','role'=>'form');
-          echo form_open_multipart('auth/lupass',$attributes3); 
+          // echo form_open_multipart('auth/lupass',$attributes3); 
+          echo form_open_multipart('auth/forgotPass',$attributes3); 
       ?>
         <div class="form-group">
           <center style='color:red'>Masukkan Email yang dipakai saat pendaftaran</center><br>
