@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Des 2020 pada 01.04
+-- Waktu pembuatan: 28 Des 2020 pada 10.22
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.1
 
@@ -163,7 +163,7 @@ CREATE TABLE `halamanstatis` (
 --
 
 INSERT INTO `halamanstatis` (`id_halaman`, `judul`, `judul_seo`, `isi_halaman`, `tgl_posting`, `gambar`, `username`, `dibaca`, `jam`, `hari`) VALUES
-(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2020-12-26', 'Alby_Poultry.png', 'admin', 5, '21:46:39', ''),
+(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2020-12-26', 'Alby_Poultry.png', 'admin', 6, '21:46:39', ''),
 (50, 'Cara Belanja', 'cara-belanja', '<p>Selamat datang di Toko Online Hijab Wanita Jawan Now. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab jaman Now.</p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Wanita Jawan Now melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2.Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2018-02-18', '', 'admin', 45, '13:41:58', '');
 
 -- --------------------------------------------------------
@@ -210,7 +210,7 @@ CREATE TABLE `identitas` (
 --
 
 INSERT INTO `identitas` (`id_identitas`, `nama_website`, `email`, `url`, `facebook`, `rekening`, `no_telp`, `kota_id`, `alamat`, `meta_deskripsi`, `meta_keyword`, `favicon`, `maps`) VALUES
-(1, 'Alby Poultry - Menjual berbagai macam peralatan peternakan', 'mazinoke25@gmail.com', 'localhost://tokoonline/TOKO_TOKOONLINEMUV1', '', '123456789', 'Telp. 0987654321', 160, 'Jl. Bangka VIII Masjid Al-Mubarrok', 'Menyajikan berbagai macam produk-produk peralatan ternak ayam.', '', 'vitamin_egg_stimulant.jpg', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3989.3358607198243!2d100.35483479999999!3d-0.8910373999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b8aa1a4e0441%3A0x3f81ebb48d31a38b!2sTunggul+Hitam%2C+Padang+Utara%2C+Kota+Padang%2C+Sumatera+Barat+25173!5e0!3m2!1sid!2sid!4v1408275531365');
+(1, 'Alby Poultry - Menjual berbagai macam peralatan peternakan', 'mazinoke25@gmail.com', 'localhost://tokoonline/TOKO_TOKOONLINEMUV1', '', '123456789', 'Telp. 0987654321', 243, 'Jl. Bangka VIII Masjid Al-Mubarrok', 'Menyajikan berbagai macam produk-produk peralatan ternak ayam.', '', 'vitamin_egg_stimulant.jpg', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3989.3358607198243!2d100.35483479999999!3d-0.8910373999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b8aa1a4e0441%3A0x3f81ebb48d31a38b!2sTunggul+Hitam%2C+Padang+Utara%2C+Kota+Padang%2C+Sumatera+Barat+25173!5e0!3m2!1sid!2sid!4v1408275531365');
 
 -- --------------------------------------------------------
 
@@ -247,7 +247,6 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `username`, `kategori_seo`, `aktif`, `sidebar`) VALUES
-(55, 'mlm', 'admin', 'mlm', 'Y', 0),
 (39, 'Pertanian', '', 'pertanian', 'Y', 1),
 (23, 'Perikanan', '', 'perikanan', 'Y', 3),
 (2, 'Wisata', '', 'wisata', 'Y', 4),
@@ -455,7 +454,15 @@ INSERT INTO `rb_konfirmasi` (`id_konfirmasi_pembayaran`, `id_penjualan`, `total_
 (10, 17, 'Rp 65,037', 1, 'pembeli', '2020-10-12', 'favicon1.png', '2020-10-12 02:07:29'),
 (11, 18, 'Rp 840,950', 1, 'pembeli', '2020-10-12', 'favicon2.png', '2020-10-12 02:51:33'),
 (12, 19, 'Rp 337,015', 1, 'Mochamad Nurullah', '2020-12-25', '8.jpg', '2020-12-25 09:24:08'),
-(13, 22, 'Rp 5,000,912', 1, 'Mochamad Nurullah', '2020-12-26', '81.jpg', '2020-12-26 09:52:22');
+(13, 22, 'Rp 5,000,912', 1, 'Mochamad Nurullah', '2020-12-26', '81.jpg', '2020-12-26 09:52:22'),
+(14, 24, 'Rp 212,535', 1, 'Novita', '2020-12-27', 'flu_burung.jpg', '2020-12-27 09:48:26'),
+(15, 24, 'Rp 212,535', 1, 'Novita', '2020-12-27', '', '2020-12-27 10:23:03'),
+(16, 25, 'Rp 56,320', 2, 'Novita', '2020-12-27', 'flu_burung1.jpg', '2020-12-27 10:23:59'),
+(17, 26, 'Rp 83,724', 2, 'Novita', '2020-12-27', 'flu_burung2.jpg', '2020-12-27 10:27:56'),
+(18, 26, 'Rp 83,724', 2, 'Novita', '2020-12-27', 'flu_burung3.jpg', '2020-12-27 10:29:07'),
+(19, 26, 'Rp 83,724', 2, 'Novita', '2020-12-27', '', '2020-12-27 10:30:07'),
+(20, 27, 'Rp 126,654', 1, 'Novita', '2020-12-27', 'flu_burung4.jpg', '2020-12-27 14:09:25'),
+(21, 28, 'Rp 20,000,953', 1, 'Mochamad Nurullah', '2020-12-28', 'flu_burung5.jpg', '2020-12-28 10:01:00');
 
 -- --------------------------------------------------------
 
@@ -468,7 +475,7 @@ CREATE TABLE `rb_konsumen` (
   `username` varchar(60) NOT NULL,
   `password` text NOT NULL,
   `nama_lengkap` varchar(255) NOT NULL,
-  `email` varchar(60) NOT NULL,
+  `email` varchar(256) NOT NULL,
   `jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL,
   `tanggal_lahir` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `tempat_lahir` varchar(100) NOT NULL DEFAULT '-',
@@ -476,15 +483,16 @@ CREATE TABLE `rb_konsumen` (
   `kota_id` int(11) NOT NULL,
   `no_hp` varchar(15) NOT NULL,
   `foto` varchar(255) NOT NULL,
-  `tanggal_daftar` date NOT NULL
+  `tanggal_daftar` date NOT NULL,
+  `is_active` int(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `rb_konsumen`
 --
 
-INSERT INTO `rb_konsumen` (`id_konsumen`, `username`, `password`, `nama_lengkap`, `email`, `jenis_kelamin`, `tanggal_lahir`, `tempat_lahir`, `alamat_lengkap`, `kota_id`, `no_hp`, `foto`, `tanggal_daftar`) VALUES
-(1, 'Nurullah', 'e65cf99ae53e2c447ef50aba6fceb3d4d468bbfea19a4a43c2c3b1a4cb2af355c18b71c6b0a4aeef90609cee03b6a13baf562dfb56eeb25d26e5252377ab64ca', 'Mochamad Nurullah', 'mazinoke25@gmail.com', 'Laki-laki', '2020-12-25 09:20:04', '-', 'Dusun Bubur', 243, '085648399296', '', '2020-12-25');
+INSERT INTO `rb_konsumen` (`id_konsumen`, `username`, `password`, `nama_lengkap`, `email`, `jenis_kelamin`, `tanggal_lahir`, `tempat_lahir`, `alamat_lengkap`, `kota_id`, `no_hp`, `foto`, `tanggal_daftar`, `is_active`) VALUES
+(21, 'Nurullah', 'd7d2f602e155ba700ed76c48d9a48009b9383e8d17435bfb0fe8ad7c664d4002f16cc7a65c6fb066963714a794f96441ef7f9b9c1b1456acfb9225cbad474fb0', 'Mochamad Nurullah', 'nurullahke29@gmail.com', 'Laki-laki', '2020-12-28 15:24:39', '-', 'Dusun Bubur', 243, '085648399296', '', '2020-12-28', 1);
 
 -- --------------------------------------------------------
 
@@ -1071,7 +1079,7 @@ CREATE TABLE `rb_penjualan` (
   `ongkir` int(11) NOT NULL,
   `resi` varchar(255) DEFAULT NULL,
   `waktu_transaksi` datetime NOT NULL,
-  `proses` enum('0','1','2','3') NOT NULL
+  `proses` enum('0','1','2','3','4') NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -1079,26 +1087,12 @@ CREATE TABLE `rb_penjualan` (
 --
 
 INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `diskon`, `kurir`, `service`, `ongkir`, `resi`, `waktu_transaksi`, `proses`) VALUES
-(1, 'TRX-20180303140923', 1, 0, 'pos', 'Paket Kilat Khusus', 69000, NULL, '2018-03-03 14:10:31', '3'),
-(2, 'TRX-20180303141906', 1, 40000, 'pos', 'Paket Kilat Khusus', 153000, NULL, '2018-03-03 14:19:39', '2'),
-(3, 'TRX-20180303151108', 1, 20000, 'jne', 'OKE', 141000, NULL, '2018-03-03 15:11:31', '1'),
-(4, 'TRX-20180303165756', 1, 0, 'pos', 'Paket Kilat Khusus', 69000, NULL, '2018-03-03 16:58:20', '0'),
-(5, 'TRX-20180303171340', 26, 20000, 'pos', 'Paket Kilat Khusus', 47500, NULL, '2018-03-03 17:15:52', '0'),
-(6, 'TRX-20180304111742', 1, 0, 'jne', 'OKE', 141000, NULL, '2018-03-04 11:19:32', '0'),
-(7, 'TRX-20180305130337', 3, 20000, 'jne', 'OKE', 141000, NULL, '2018-03-05 13:23:56', '0'),
-(8, 'TRX-20180307062229', 1, 0, 'jne', 'REG', 86000, NULL, '2018-03-07 06:22:36', '0'),
-(9, 'TRX-20191120063645', 1, 0, 'jne', 'REG', 90000, '123456', '2019-11-20 06:39:19', '0'),
-(10, 'TRX-20191120064207', 1, 20000, 'cod', 'Cash on delivery', 1, NULL, '2019-11-20 06:47:48', '0'),
-(11, 'TRX-20191120064832', 1, 0, 'cod', 'Cash on delivery', 1, NULL, '2019-11-20 06:49:49', '0'),
-(12, 'TRX-20191120065135', 1, 0, 'cod', 'Cash on delivery', 1, NULL, '2019-11-20 06:51:57', '0'),
-(13, 'TRX-20191120065235', 1, 0, 'cod', 'Cash on delivery', 1, NULL, '2019-11-20 06:52:58', '0'),
-(14, 'TRX-20191120065322', 1, 0, 'cod', 'Cash on delivery', 1, NULL, '2019-11-20 06:53:32', '0'),
-(15, 'TRX-20191120070207', 1, 0, 'pos', 'Paket Kilat Khusus', 76500, 'RESI-432312AD12', '2019-11-20 07:02:21', '0'),
-(16, 'TRX-20191120072356', 1, 0, 'cod', 'Cash on delivery', 1, '', '2019-11-20 07:28:30', '0'),
-(17, 'TRX-20201012020036', 29, 0, 'jne', 'Cash on delivery', 1, '547601016142539', '2020-10-12 02:03:58', '3'),
-(18, 'TRX-20201012024949', 29, 0, 'jne', 'Cash on delivery', 1, '547601016142539', '2020-10-12 02:50:16', '3'),
+(28, 'TRX-20201228095952', 6, 0, 'jne', 'Cash on delivery', 1, NULL, '2020-12-28 10:00:22', '1'),
+(27, 'TRX-20201227140654', 3, 0, 'pos', 'Express Next Day Barang', 26000, NULL, '2020-12-27 14:07:05', '4'),
+(26, 'TRX-20201227102724', 3, 0, 'pos', 'Express Next Day Barang', 13000, NULL, '2020-12-27 10:27:33', '4'),
+(25, 'TRX-20201227102320', 3, 0, 'jne', 'REG', 6000, NULL, '2020-12-27 10:23:32', '4'),
 (19, 'TRX-20201225092015', 1, 100000, 'jne', 'REG', 112000, NULL, '2020-12-25 09:22:36', '1'),
-(20, '8', 1, 0, 'jne', 'Cash on delivery', 1, NULL, '2020-12-25 10:08:28', '0'),
+(24, 'TRX-20201227094535', 3, 0, 'jne', 'REG', 12000, NULL, '2020-12-27 09:45:59', '4'),
 (21, 'TRX-20201225101021', 1, 80000, 'tiki', 'Cash on delivery', 1, NULL, '2020-12-25 10:10:32', '0'),
 (22, 'TRX-20201226094911', 1, 0, 'pos', 'Cash on delivery', 1, NULL, '2020-12-26 09:49:29', '1'),
 (23, 'TRX-20201226130735', 1, 0, 'tiki', 'REG', 120000, NULL, '2020-12-26 13:08:00', '0');
@@ -1153,7 +1147,12 @@ INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_pr
 (27, 20, 13, 10, 65000, 'pcs', ''),
 (28, 21, 12, 4, 65000, 'unit', ''),
 (29, 22, 23, 100, 50000, 'biji', ''),
-(30, 23, 29, 10, 200000, 'biji', '');
+(30, 23, 29, 10, 200000, 'biji', ''),
+(31, 24, 29, 1, 200000, 'biji', ''),
+(32, 25, 23, 1, 50000, 'biji', ''),
+(33, 26, 24, 1, 70000, 'biji', ''),
+(34, 27, 19, 1, 100000, 'pcs', ''),
+(35, 28, 29, 100, 200000, 'biji', '');
 
 -- --------------------------------------------------------
 
@@ -1180,7 +1179,8 @@ INSERT INTO `rb_penjualan_temp` (`id_penjualan_detail`, `session`, `id_produk`, 
 (26, 'TRX-20201225101640', 11, 1, 89000, 'pcs', '', '2020-12-25 10:16:40'),
 (27, 'TRX-20201225190731', 9, 1, 68500, 'unit', '', '2020-12-25 19:07:31'),
 (28, '12', 29, 1, 200000, 'biji', '', '2020-12-26 09:42:17'),
-(31, 'TRX-20201226171002', 24, 1, 70000, 'biji', '', '2020-12-26 17:10:02');
+(31, 'TRX-20201226171002', 24, 1, 70000, 'biji', '', '2020-12-26 17:10:02'),
+(32, 'TRX-20201227073551', 27, 1, 100000, 'biji', '', '2020-12-27 07:35:51');
 
 -- --------------------------------------------------------
 
@@ -3159,7 +3159,8 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2020-10-12', 251, '1602511268'),
 ('::1', '2020-12-25', 103, '1608898079'),
 ('::1', '2020-12-26', 328, '1608995898'),
-('::1', '2020-12-27', 22, '1609027362');
+('::1', '2020-12-27', 521, '1609075904'),
+('::1', '2020-12-28', 333, '1609147132');
 
 -- --------------------------------------------------------
 
@@ -3242,7 +3243,31 @@ CREATE TABLE `testimoni` (
 
 INSERT INTO `testimoni` (`id_testimoni`, `id_konsumen`, `isi_testimoni`, `aktif`, `waktu_testimoni`) VALUES
 (2, 3, '<p>Menjadi seorang sukses dengan cara instan memang impian banyak orang dan saya yakin anda pun akan menyetujuinya. Namun, kembali lagi kepada diri anda sendiri apakah anda benar-benar memahami makna menjadi seorang entrepreneur sesungguhnya atau hanya memaknai seperti halnya membuat mie instan.</p>\n', 'Y', '2016-09-12 07:09:16'),
-(5, 6, 'Saya berusaha mencoba memaklumi mereka tentang kesan menjadi entrepreneur instan ini dengan menjadi seorang MLM-ers, dengan menanyakan penyebab bisa memunculkan kesan instan tersebut. Mereka memberikan jawaban beragam berkaitan dengan proses instan seorang entrepreneur ini.', 'Y', '2016-09-14 14:11:36');
+(5, 6, 'Saya berusaha mencoba memaklumi mereka tentang kesan menjadi entrepreneur instan ini dengan menjadi seorang MLM-ers, dengan menanyakan penyebab bisa memunculkan kesan instan tersebut. Mereka memberikan jawaban beragam berkaitan dengan proses instan seorang entrepreneur ini.', 'Y', '2016-09-14 14:11:36'),
+(8, 3, '<p>itu siapa yang nulis?</p>\r\n', 'Y', '2020-12-27 17:27:57');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `token`
+--
+
+CREATE TABLE `token` (
+  `id` int(11) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `token` varchar(128) NOT NULL,
+  `tanggal_daftar` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `token`
+--
+
+INSERT INTO `token` (`id`, `email`, `token`, `tanggal_daftar`) VALUES
+(1, 'nurullahke29@gmail.com', 'use3Ims9fueCdS02SRRQfQHxSIb9iStSc+sdoUH8A/w=', '2020-12-28'),
+(2, 'nurullahke29@gmail.com', 'OaC3RMhaSHm38+a9nq25HTAg85S2w96zQwJ/S046pd8=', '2020-12-28'),
+(3, 'nurullahke29@gmail.com', 'Oib7oVPiS+USAqwK4WwMTT88dGBFyPiKcdL7rD9Z2cc=', '2020-12-28'),
+(4, 'nurullahke29@gmail.com', 'xmjMMnfNEcyOr+2mLobsuPE2BpwBfeJLvcMIoUTDNF0=', '2020-12-28');
 
 -- --------------------------------------------------------
 
@@ -3269,7 +3294,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id_users`, `username`, `password`, `nama_lengkap`, `email`, `no_telp`, `foto`, `level`, `blokir`, `id_session`) VALUES
 (1, 'admin', '7ead85638082a79e64c7c384b11607df22ee3266631bc380f783848d994efbb6600d5846721d920153ab90d6db05f84b81704efefdb63f0355c5bf42debd8832', 'Alby Poultry ', 'mazinoke25@gmail.com', '085648399296', 'vitamin_egg_stimulant.jpg', 'admin', 'N', 'q173s8hs1jl04st35169ccl8o7'),
-(4, 'user', '7ed525cc128e77e247fda10704685f21ced735de85c698ce3a6a4e2444010dcf1302a09f5c28728551a24820c8b940d0c06e1906141b4c9f77a276d389d18d43', 'User', 'user@user.com', '085372723132', 'rak_telur_plastik.jpg', 'user', 'N', 'ee11cbb19052e40b07aac0ca060c23ee-20201012013224');
+(4, 'user', 'e65cf99ae53e2c447ef50aba6fceb3d4d468bbfea19a4a43c2c3b1a4cb2af355c18b71c6b0a4aeef90609cee03b6a13baf562dfb56eeb25d26e5252377ab64ca', 'User', 'user@user.com', '085372723132', 'rak_telur_plastik.jpg', 'user', 'N', 'ee11cbb19052e40b07aac0ca060c23ee-20201012013224');
 
 -- --------------------------------------------------------
 
@@ -3503,6 +3528,12 @@ ALTER TABLE `testimoni`
   ADD PRIMARY KEY (`id_testimoni`);
 
 --
+-- Indeks untuk tabel `token`
+--
+ALTER TABLE `token`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
@@ -3606,13 +3637,13 @@ ALTER TABLE `rb_keterangan`
 -- AUTO_INCREMENT untuk tabel `rb_konfirmasi`
 --
 ALTER TABLE `rb_konfirmasi`
-  MODIFY `id_konfirmasi_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_konfirmasi_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT untuk tabel `rb_konsumen`
 --
 ALTER TABLE `rb_konsumen`
-  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT untuk tabel `rb_kota`
@@ -3636,19 +3667,19 @@ ALTER TABLE `rb_pembelian_detail`
 -- AUTO_INCREMENT untuk tabel `rb_penjualan`
 --
 ALTER TABLE `rb_penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `rb_penjualan_detail`
 --
 ALTER TABLE `rb_penjualan_detail`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT untuk tabel `rb_penjualan_temp`
 --
 ALTER TABLE `rb_penjualan_temp`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT untuk tabel `rb_produk`
@@ -3696,7 +3727,13 @@ ALTER TABLE `templates`
 -- AUTO_INCREMENT untuk tabel `testimoni`
 --
 ALTER TABLE `testimoni`
-  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT untuk tabel `token`
+--
+ALTER TABLE `token`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
