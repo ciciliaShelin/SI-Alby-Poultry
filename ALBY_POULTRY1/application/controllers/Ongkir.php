@@ -13,7 +13,7 @@ class Ongkir extends CI_Controller {
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		  CURLOPT_CUSTOMREQUEST => "GET",
 		  CURLOPT_HTTPHEADER => array(
-		    "key: 2331a41a8b4752d85c6bf6b3833d91db"
+		    "key: 874b5ec41d9092886a1686cf8530ad96"
 		  ),
 		));
 
@@ -49,10 +49,10 @@ class Ongkir extends CI_Controller {
 		  CURLOPT_TIMEOUT => 30,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		  CURLOPT_CUSTOMREQUEST => "POST",
-		  CURLOPT_POSTFIELDS => "origin=".$asal."&destination=".$id_kabupaten."&weight=".$berat."&courier=".$kurir."",
+		  CURLOPT_POSTFIELDS => "origin=243&destination=".$id_kabupaten."&weight=".$berat."&courier=".$kurir."",
 		  CURLOPT_HTTPHEADER => array(
 		    "content-type: application/x-www-form-urlencoded",
-		    "key: 2331a41a8b4752d85c6bf6b3833d91db"
+		    "key: 874b5ec41d9092886a1686cf8530ad96"
 		  ),
 		));
 

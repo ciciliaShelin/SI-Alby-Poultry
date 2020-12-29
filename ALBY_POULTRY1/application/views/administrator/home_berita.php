@@ -39,7 +39,7 @@
                                       <td>".cek_terakhir($row['waktu_transaksi'])." lalu</td>
                                       <td>
                                       <a class='btn btn-info btn-xs' title='Detail data pesanan' href='".base_url()."administrator/tracking/$row[kode_transaksi]'><span class='glyphicon glyphicon-search'></span></a>
-                                      <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_transaksi/$row[kode_transaksi]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                      <a class='btn btn-danger btn-xs hidden' title='Delete Data' href='".base_url()."administrator/delete_transaksi/$row[kode_transaksi]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                                       </td>
                                      
                                    </tr>";

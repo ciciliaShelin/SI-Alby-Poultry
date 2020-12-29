@@ -150,7 +150,7 @@ class Produk extends CI_Controller {
 				        		  'waktu_order'=>date('Y-m-d H:i:s'));
 					$this->model_app->insert('rb_penjualan_temp',$data);
 				}
-				redirect('produk/keranjang');
+				redirect('produk/detail');
 			}
 		}else{
 				$data['record'] = $this->model_app->view_join_rows('rb_penjualan_temp','rb_produk','id_produk',array('session'=>$this->session->idp),'id_penjualan_detail','ASC');

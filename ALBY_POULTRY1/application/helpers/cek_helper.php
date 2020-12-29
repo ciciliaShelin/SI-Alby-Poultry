@@ -16,6 +16,14 @@ error_reporting(0);
     	}
     }
 
+    function cek_session_bukanadmin(){
+    	$ci = & get_instance();
+    	$session = $ci->session->userdata('level');
+    	if ($session = 'konsumen'){
+    		redirect(base_url());
+    	}
+    }
+
     function favicon(){
         $ci = & get_instance();
         $fav = $ci->db->query("SELECT favicon FROM identitas ORDER BY id_identitas DESC LIMIT 1")->row_array();

@@ -1,7 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Administrator extends CI_Controller {
+	// public function __construct()
+    // {
+	// 	parent::__construct();
+	// 	cek_session_bukanadmin();
+    // }
+
+
 	function index(){
+		// cek_session_bukanadmin();
 		if (isset($_POST['submit'])){
 			$username = $this->input->post('a');
 			$password = hash("sha512", md5($this->input->post('b')));

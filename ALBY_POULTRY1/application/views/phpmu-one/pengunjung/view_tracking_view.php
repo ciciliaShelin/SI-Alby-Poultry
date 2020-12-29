@@ -1,6 +1,10 @@
 <p class='sidebar-title'><?php echo $title; ?></p>
 <?php 
-if ($total['proses']=='0'){ $proses = '<i class="text-danger">Pending</i>'; }elseif($total['proses']=='1'){ $proses = '<i class="text-warning">Proses</i>'; }elseif($total['proses']=='2'){ $proses = '<i class="text-info">Konfirmasi</i>'; }else{ $proses = '<i class="text-success">Packing </i>'; }
+if ($total['proses']=='0'){ $proses = '<i class="text-danger">Pending</i>'; }
+elseif($total['proses']=='1'){ $proses = '<i class="text-warning">Packing</i>'; }
+elseif($total['proses']=='2'){ $proses = '<i class="text-info">Konfirmasi</i>'; }
+elseif($total['proses']=='3'){ $proses = '<i class="text-success">Dikirim</i>'; }
+else{ $proses = '<i class="text-primary">Diterima</i>'; }
   echo "<div class='col-md-7'>
         <dl class='dl-horizontal'>
             <dt>Nama</dt>       <dd>$rows[nama_lengkap]</dd>

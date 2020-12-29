@@ -23,7 +23,7 @@
                           <input class='btn btn-success btn-sm' type='submit' value='Beli Sekarang'>
                          
                         
-                          <div class='col-sm-3'>
+                          <div hidden class='col-sm-3'>
                           <form action='".base_url()."produk/masuk_keranjang' method='POST'>
                           <input class='btn btn-success btn-sm' type='submit' value='Masuk Keranjang'>
                           </div>

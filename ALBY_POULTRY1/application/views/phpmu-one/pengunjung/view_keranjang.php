@@ -51,7 +51,7 @@
       </table>
 
       <a class='btn btn-success btn-sm' href='".base_url()."produk'>Lanjut Belanja</a>
-      <a class='btn btn-primary btn-sm' href='".base_url()."produk/checkouts/'>Selesai Belanja</a>";
+      <a class='btn btn-primary btn-sm' href='".base_url()."produk/checkouts/'>Checkout</a>";
 
       $ket = $this->db->query("SELECT * FROM rb_keterangan")->row_array();
       echo "<hr><br>$ket[keterangan]";

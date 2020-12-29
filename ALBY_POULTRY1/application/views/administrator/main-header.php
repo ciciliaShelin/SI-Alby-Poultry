@@ -26,7 +26,7 @@
             <span class="sr-only">Toggle navigation</span>
           </a>
 
-          <div class="navbar-custom-menu">
+          <div hidden class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
