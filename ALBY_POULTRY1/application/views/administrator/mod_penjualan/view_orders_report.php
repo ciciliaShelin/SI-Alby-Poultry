@@ -56,7 +56,8 @@
                                                     <li><a href='".base_url()."administrator/orders_status/$row[id_penjualan]/4' onclick=\"return confirm('Apa anda yakin untuk ubah status jadi Diterima ?')\"> Diterima</a></li> 
                                                   </ul> 
                                               </div>
-                                            <a class='btn btn-info btn-xs' title='Detail data pesanan' href='".base_url()."administrator/tracking/$row[kode_transaksi]'><span class='glyphicon glyphicon-search'></span></a></td>
+                                            <a class='btn btn-info btn-xs' title='Detail data pesanan' href='".base_url()."administrator/tracking/$row[kode_transaksi]'><span class='glyphicon glyphicon-search'></span></a>
+                                            <a class='btn btn-danger btn-xs ' title='Delete Data' href='".base_url()."administrator/delete_transaksi/$row[id_penjualan]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a></td>
                                          </tr>";
                                     $no++;
                                   }
