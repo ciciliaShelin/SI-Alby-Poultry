@@ -6,7 +6,7 @@ Total Belanja anda <b style='color:red'>Rp <?php echo $total_bayar; ?></b><br>
 <a target='_BLANK' class="btn btn-default" href="<?php echo base_url(); ?>produk/print_invoice/<?php echo $orders; ?>"><span class="glyphicon glyphicon-print"></span> Cetak Invoice</a>
 <br><br>
 
-Kami juga telah mengirimkan detail pesanan anda ke <b class='btn btn-xs btn-success'><?php echo $email; ?></b><br>
+<!-- Kami juga telah mengirimkan detail pesanan anda ke <b class='btn btn-xs btn-success'><?php echo $email; ?></b><br> -->
 Silahkan mentransferkan uang dengan total <b>Rp <?php echo $total_bayar; ?></b> ke salah satu pilihan bank di bawah ini : <br> 
 </center>
 <hr>

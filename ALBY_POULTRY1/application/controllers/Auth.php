@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 			$this->form_validation->set_rules('e', 'alamat', 'required|trim');
 			$this->form_validation->set_rules('h', 'kota', 'required|trim');
 			$this->form_validation->set_rules('a', 'username', 'required|trim|is_unique[rb_konsumen.username]',['is_unique' => 'Username ini sudah digunakan! Masukan username lainnya']);
-			$this->form_validation->set_rules('b', 'password', 'required|trim');
+			$this->form_validation->set_rules('b', 'password', 'required|trim|min_length[4]');
 			$this->form_validation->set_rules('email','email','required|trim|valid_email|is_unique[rb_konsumen.email]',['is_unique' => 'Email ini sudah digunakan! Masukan email lainnya']);
 			
 			// $cek  = $this->model_app->view_where('rb_konsumen',array('username'=>$this->input->post('a')))->num_rows();
@@ -400,7 +400,7 @@ class Auth extends CI_Controller {
             'matches' => 'Password tidak sama!',
             'min_length' => 'Password terlalu pendek'
         ]);
-        $this->form_validation->set_rules('password2', 'repeat password', 'trim|required|min_length[3]|matches[password1]');
+        $this->form_validation->set_rules('password2', 'repeat password', 'trim|required|min_length[4]|matches[password1]');
         if($this->form_validation->run() == false)
         {
 			$data['title'] = 'Ubah Password';

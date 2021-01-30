@@ -10,14 +10,17 @@ echo "<p class='sidebar-title'> Checkout Belanja - ".$this->session->idp."</p>
             <dt>Email</dt>       <dd>$rows[email]</dd>
             <dt>Kota</dt>               <dd>$rows[nama_kota]</dd>
             <dt>Alamat Lengkap</dt>     <dd>$rows[alamat_lengkap]</dd>
+
         </dl>
     </div>
+
 
     <div class='col-md-4'>
         <center>Total Bayar <br><h4 id='totalbayar'></h4>   
         <button type='submit' name='submit' id='oksimpan' class='btn btn-success btn-flat btn-sm' style='display:none'>Lakukan Pembayaran</button>
         </center>
     </div>
+
 
       <table class='table table-striped table-condensed'>
           <thead>
@@ -67,6 +70,11 @@ echo "<p class='sidebar-title'> Checkout Belanja - ".$this->session->idp."</p>
       </table>";
       $kode_unik = substr($this->session->idp,-3);
 ?>
+
+<a class='btn btn-success btn-xs pull-right' href="<?= base_url('members/Ubah_Alamat');?>"><span class="glyphicon glyphicon-edit"></span> Ubah Alamat</a>
+<!-- <input class='btn btn-primary btn-sm' type= 'submit' name='submit' value='Ubah Alamat'> -->
+<!-- <a class="btn btn-primary btn-sm" href="#" data-toggle='modal' data-target='#ubahAlamat'>Ubah Alamat</a> -->
+
 <input type="hidden" name="total" id="total" value="<?php echo $total['total']+$kode_unik; ?>"/>
 <input type="hidden" name="ongkir" id="ongkir" value="0"/>
 <input type="hidden" name="berat" value="<?php echo $total['total_berat']; ?>"/>
@@ -84,7 +92,7 @@ echo "<p class='sidebar-title'> Checkout Belanja - ".$this->session->idp."</p>
             <?php
         }
         ?>
-        <label class="radio-inline"><input type="radio" name="kurir" class="kurir" value="cod"/> COD (Cash on delivery)</label>
+        <!-- <label class="radio-inline"><input type="radio" name="kurir" class="kurir" value="cod"/> COD (Cash on delivery)</label> -->
     </div>
 </div>
 <div id="kuririnfo" style="display: none;">

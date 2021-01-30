@@ -33,6 +33,21 @@ class Members extends CI_Controller {
 		}
 	}
 
+	function Ubah_Alamat(){
+		cek_session_members();
+		$id = $this->uri->segment(3);
+		if (isset($_POST['submit'])){
+			$this->model_members->profile_update($this->session->id_konsumen);
+			redirect('produk/checkouts');
+		}else{
+			$data['title'] = 'Ubah Alamat Pengiriman';
+			$data['row'] = $this->model_app->profile_konsumen($this->session->id_konsumen)->row_array();
+			$row = $this->model_app->profile_konsumen($this->session->id_konsumen)->row_array();
+			$data['kota'] = $this->model_app->view('rb_kota');
+			$this->template->load('phpmu-one/template','phpmu-one/pengunjung/view_ubah_alamat',$data);
+		}
+	}
+
     function history(){
 		cek_session_members();
 		$data['title'] = 'History Orderan anda';

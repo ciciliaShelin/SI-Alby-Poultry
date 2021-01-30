@@ -68,3 +68,48 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+<div class="modal fade" id="ubahAlamat" tabindex="-1" aria-labelledby="ubahAlamatLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ubahAlamatLabel">Ubah Alamat</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+      
+      <?php 
+      $attributes = array('id' => 'formku','class'=>'form-horizontal','role'=>'form');
+      echo form_open_multipart('members/edit_profile',$attributes); 
+      echo "<table class='table table-hover table-condensed'>
+      <thead>
+
+        <tr><td><b>Alamat</b></td>         <td><textarea class='required form-control' name='g'>$row[alamat_lengkap]</textarea></td></tr>
+        <tr><td><b>Kota Sekarang</b></td>             <td><select class='form-control' name='j' id='city' required>
+                                                    <option value=''>- Pilih -</option>";
+                                                    foreach ($kota->result_array() as $rows){
+                                                      if ($row['kota_id']==$rows['kota_id']){
+                                                        echo "<option value='$rows[kota_id]' selected>$rows[nama_kota]</option>";
+                                                      }else{
+                                                        echo "<option value='$rows[kota_id]'>$rows[nama_kota]</option>";
+                                                      }
+                                                    }
+                                                 echo "</select>
+        </td></tr>
+        <tr><td><b>No Hp</b></td>                  <td><input style='width:40%' class='required number form-control' type='number' name='l' value='$row[no_hp]'></td></tr>
+       
+        <tr><td></td><td><input class='btn btn-sm btn-primary' type='submit' name='submit' value='Simpan Perubahan'></td></tr>
+      </thead>
+      </table>";
+      echo form_close();
+      ?>
+        
+      
+    </div>
+  </div>
+</div>

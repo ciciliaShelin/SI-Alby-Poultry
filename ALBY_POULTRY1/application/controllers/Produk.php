@@ -257,13 +257,14 @@ class Produk extends CI_Controller {
 				          </thead>
 				          <tbody>";
 
-				          $no = 1;
+						  $no = 1;
+						  $diskon_total = 0;
 				          $belanjaan = $this->model_app->view_join_where('rb_penjualan_detail','rb_produk','id_produk',array('id_penjualan'=>$idp),'id_penjualan_detail','ASC');
 				          foreach ($belanjaan as $row){
 				          $sub_total = (($row['harga_jual']-$row['diskon'])*$row['jumlah']);
 				          if ($row['diskon']!='0'){ $diskon = "<del style='color:red'>".rupiah($row['harga_jual'])."</del>"; }else{ $diskon = ""; }
 				          if (trim($row['gambar'])==''){ $foto_produk = 'no-image.png'; }else{ $foto_produk = $row['gambar']; }
-				          $diskon_total = $sub_total + $row['diskon']*$row['jumlah'];
+				          $diskon_total = $diskon_total + $row['diskon']*$row['jumlah'];
 
 				$message .= "<tr bgcolor='#e3e3e3'><td>$no</td>
 				                    <td>$row[nama_produk]</td>

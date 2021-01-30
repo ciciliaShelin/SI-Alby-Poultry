@@ -53,7 +53,7 @@
 
                 $cek=$this->model_app->umenu_akses("pesanmasuk",$this->session->id_session);
                 if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li hidden><a href='".base_url()."administrator/pesanmasuk'><i class='fa fa-circle-o'></i> Pesan Masuk</a></li>";
+                  echo "<li ><a href='".base_url()."administrator/pesanmasuk'><i class='fa fa-circle-o'></i> Pesan Masuk</a></li>";
                 }
 
                 $cek=$this->model_app->umenu_akses("download",$this->session->id_session);
